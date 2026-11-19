@@ -28,16 +28,16 @@ sources:
 ![插畫：夜裡一張木頭工作桌，檯燈亮著，桌上散著幾張便利貼與一張只有線條的縮圖草稿，旁邊放著一台關著螢幕的筆電](images/hero-16x9.webp)
 *圖說：AI 生成的示意插畫，象徵一個從便利貼上的名詞開始長出來的功能；圖內沒有文字，也不是影片畫面。*
 
-Matt Pocock 開場就說：「你們一次又一次地要我展示我的開發流程究竟是什麼樣子」（[00:00](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=0s)）。這次他把一個真正要用的功能從頭做到尾：改造自己影片製作工具裡的縮圖編輯器，讓 diagram 可以直接畫在縮圖裡他的臉旁邊（[00:54](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=54s)）。他預告會特別著重兩個 skill（[00:26](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=26s)）：開工前把想法問清楚的 grill-with-docs，和做完後回頭檢討整批 session 的 retro。grilling 是他對「讓 agent 逐題追問、把想法問清楚」的叫法。
+Matt Pocock 開場就說：「你們一次又一次地要我展示我的開發流程究竟是什麼樣子」（[00:00](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=0s)）。這次他把一個真正要用的功能從頭做到尾：改造自己影片製作工具裡的縮圖編輯器，讓 diagram 可以直接畫在縮圖裡他的臉旁邊（[00:54](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=54s)）。他預告會特別著重兩個 skill（[00:26](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=26s)）：開工前把想法問清楚的 grill-with-docs，和做完後回頭檢討整批 session 的 retro。grilling 是他的叫法，指讓 agent 逐題追問，把想法問清楚。
 
 ## 三十秒版
 
 - 他要讓 diagram 直接畫在縮圖裡自己的臉旁邊，開工時卻說完全不知道怎麼做。
 - 動手前，他用 grill-with-docs 讓 agent 逐題追問，先把名稱與資料模型問清楚。
 - 外觀交給原型：agent 做了三個版本，他只留一個，再寫成 spec 與 ticket。
-- 他把對話 compact（壓縮成摘要），讓 implement-spec AFK（人不在電腦前）實作，回來得到一個大 PR，再請 agent 拆成 7 個堆疊的小 PR。
-- 他審程式碼，除了確認能動，也在意產出程式碼的系統；12 則 review comment 交給 retro，變成一批 issue 與 lint rule 提案。
-- 他說自己在前段對齊時最有價值；grilling 和 retro 是他和系統互動的兩個主要時間點。
+- 他把對話 compact（壓縮成摘要），交給 implement-spec 實作，自己 AFK（人不在電腦前）；回來得到一個大 PR，再請 agent 拆成 7 個堆疊的小 PR。
+- 他審程式碼，除了確認能動，也在意產出程式碼的系統；他留下的 12 則 review comment 交給 retro，變成一批 issue 與 lint rule 提案。
+- 他說自己在前段對齊時最有價值，最後審查時也很有用；grilling 和 retro 是他與系統互動的兩個主要時間點。
 
 ## 這篇怎麼讀
 
@@ -63,13 +63,13 @@ Matt Pocock 開場就說：「你們一次又一次地要我展示我的開發�
 
 他的第一段提示是口述的（[04:53](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=293s)）：他喜歡縮圖產生器逼自己把臉放上畫面，不喜歡附 diagram 的繁瑣流程，UI 會長什麼樣子也不知道（[05:27](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=327s)）。說完他提醒觀眾，這段提示**只講要解決的問題**，沒說確切該做什麼：「如果我給它原因，agent 就會更放得開手，自己去產出解決方案，或者也許就解決方案跟我討論一下。」（[05:53](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=353s)）
 
-他設想觀眾可能會想：這和 plan mode 之類的做法比起來好在哪（[09:41](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=581s)）。他的回答是，這個 skill 讓人和 agent 在動手前先對要做的東西取得共識，產出會更可預測（[09:56](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=596s)）。對話也要由人主導：「不是 agent 在 grilling 你。」（[14:29](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=869s)）隨時可以說談得夠多了，該去寫程式了。
+他設想觀眾可能會想：這和 plan mode 之類的做法比起來好在哪（[09:41](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=581s)）。他的回答是，這個 skill 讓人和 agent 在動手前先對要做的東西取得共識，產出會更可預測（[09:56](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=596s)）。對話也要由人主導：「不是 agent 在 grilling 你。」（[14:29](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=869s)）人隨時可以喊停，說談得夠多了，該去寫程式了。
 
 ### 術語表、ADR 與柴斯特頓的籬笆
 
-他的術語表大約 560 行，定義了這個 repo 的主要概念（[10:46](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=646s)）。照它的定義，diagram 其實是一組 diagram snapshot，也就是拍 clip 當下那張 diagram 的複本（[11:07](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=667s)）。他擔心要放進縮圖的東西「只是一個單一 snapshot」（[12:12](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=732s)）。外行人聽來像行話，他說模型聽得懂，因為術語檔就在它的 context 裡（[12:29](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=749s)）。術語表也在 grilling 中更新：Claude 提議新增 thumbnail 與 cutout 兩個詞條（[13:43](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=823s)），之後又提出 thumbnail drawing（[15:06](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=906s)），並建議避開 thumbnail diagram（[15:16](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=916s)）。
+他的術語表大約 560 行，定義了這個 repo 的主要概念（[10:46](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=646s)）。照它的定義，diagram 其實是一組 diagram snapshot，也就是拍 clip 當下那張 diagram 的複本（[11:07](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=667s)）。他擔心要放進縮圖的東西「只是一個單一 snapshot」（[12:12](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=732s)）。這些詞外行人聽來像行話，他說模型聽得懂，因為術語檔就在它的 context 裡（[12:29](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=749s)）。術語表也在 grilling 中更新：Claude 提議新增 thumbnail 與 cutout 兩個詞條（[13:43](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=823s)），之後又提出 thumbnail drawing（[15:06](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=906s)），並建議避開 thumbnail diagram（[15:16](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=916s)）。
 
-agent 也讀了一份過去的 ADR（架構決策紀錄）（[16:15](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=975s)）。他的分工是：術語表某種程度上描述了應用程式目前的樣貌（[16:35](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=995s)），ADR 負責解釋當初為什麼這樣決定（[16:40](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1000s)）。他把這稱為典型的「柴斯特頓的籬笆」問題，念了 G. K. Chesterton 在《The Thing》裡的段落（[archive.org 全文](https://archive.org/download/thingwhyiamcatho0000ches/thingwhyiamcatho0000ches_djvu.txt)）：路上橫著一道籬笆，看不出它有什麼用就不准拆，先去想清楚（[16:54](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1014s)）。
+agent 也讀了一份過去的 ADR（架構決策紀錄）（[16:15](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=975s)）。兩份文件在他那裡分工不同：術語表某種程度上描述了應用程式目前的樣貌（[16:35](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=995s)），ADR 負責解釋當初為什麼這樣決定（[16:40](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1000s)）。他說 ADR 要處理的，是典型的「柴斯特頓的籬笆」問題，並念了 G. K. Chesterton 在《The Thing》裡的段落（[archive.org 全文](https://archive.org/download/thingwhyiamcatho0000ches/thingwhyiamcatho0000ches_djvu.txt)）：路上橫著一道籬笆，看不出它有什麼用就不准拆，先去想清楚（[16:54](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1014s)）。
 
 > 重點：在他的用法裡，ADR 就是幫人追蹤每道籬笆為什麼立起來的紀錄（[17:25](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1045s)）。
 
@@ -84,7 +84,7 @@ agent 也會越線。它自作主張替 thumbnail drawing 寫了詞條（[20:58]
 
 ### 情境測試：三個候選名
 
-他同意 thumbnail diagram 有點彆扭，請 agent 給幾個選項做情境測試（[22:31](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1351s)）：**列出描述系統的句子**，看換成不同詞彙時好不好說（[22:57](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1377s)）。Claude 的表格比較三個候選（[23:09](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1389s)），他邊念邊評，下表把他的評語和 Claude 表格的判斷分開列：
+回到命名。他也同意 thumbnail diagram 這個詞有點彆扭，於是請 agent 給幾個選項做情境測試（[22:31](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1351s)）：**列出描述系統的句子**，看換成不同詞彙時好不好說（[22:57](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1377s)）。Claude 的表格比較三個候選（[23:09](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1389s)），他邊念邊評，下表把他的評語和 Claude 表格的判斷分開列：
 
 | 候選名 | Matt 的評語 | Claude 表格的判斷 |
 |---|---|---|
@@ -97,9 +97,9 @@ agent 也會越線。它自作主張替 thumbnail drawing 寫了詞條（[20:58]
 
 ### 其餘問題
 
-核心想通後，他請 agent 一次問多題（[25:37](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1537s)）。其中幾題：component 會和 React 的 component 撞名，改成 diagram component（[28:05](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1685s)）；他不要兩個有微小差異的 diagram 編輯器（[28:56](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1736s)），後來 Claude 問要不要把 playground 的編輯器抽成共用元件，他立刻答應（[30:57](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1857s)）；Claude 指出刪影片會連帶硬刪除縮圖（[29:56](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1796s)），他說這些資料很寶貴，所以「幾乎總是選擇軟刪除」（[30:39](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1839s)）。
+資料模型與名稱這兩個核心問題想通後，他請 agent 一次問多題（[25:37](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1537s)）。其中幾題：component 會和 React 的 component 撞名，改成 diagram component（[28:05](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1685s)）；他不要兩個有微小差異的 diagram 編輯器（[28:56](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1736s)），後來 Claude 問要不要把 playground 的編輯器抽成共用元件，他立刻答應（[30:57](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1857s)）；Claude 指出刪影片會連帶硬刪除縮圖（[29:56](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1796s)），他說這些資料很寶貴，所以「幾乎總是選擇軟刪除」（[30:39](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1839s)）。
 
-agent 也會漏看。畫面上的第 26 題說搜尋 diagram 的步驟目前還不存在，他認為不是真的：「它實際上沒有注意到程式碼中的某些東西，這讓人有點惱火。」（[31:14](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1874s)）在他看來，grilling 也是和程式碼保持接觸的方式（[32:02](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1922s)）。
+agent 也會漏看。畫面上的第 26 題說搜尋 diagram 的步驟目前還不存在，他認為這不對：「它實際上沒有注意到程式碼中的某些東西，這讓人有點惱火。」（[31:14](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1874s)）在他看來，grilling 也是和程式碼保持接觸的方式（[32:02](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1922s)）。
 
 ## 原型：看了才知道自己討厭什麼
 
@@ -108,9 +108,9 @@ grilling 中途，agent 就問要不要先做幾種編輯介面的原型（[12:5
 ![插畫：桌上並排三張手繪的縮圖版面草稿，兩張被輕輕推到一旁，中間那張被一盞小燈照亮](images/prototypes-16x9.webp)
 *圖說：AI 生成的示意插畫：三個原型只留一個；圖內沒有文字，不代表影片中原型的實際樣子。*
 
-這段人在迴圈裡的時間，是用來大幅**縮小 agent 的決策空間**：外觀和資料模型都定了（[36:41](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2201s)），之後 AFK 時，agent 只要把這兩樣東西接起來（[36:53](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2213s)）。第二版原型放進真正的縮圖頁面後，他發現自己開始一路回「對、對、對」，代表雙方已經一致，grilling 快收尾了（[38:49](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2329s)）。
+他說，這段人在迴圈裡陪著 agent 的時間，是用來大幅**縮小 agent 的決策空間**：外觀和資料模型都定了（[36:41](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2201s)），之後他 AFK，agent 只要把這兩樣東西接起來（[36:53](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2213s)）。A 版迭代出的新版本放進縮圖編輯器後，他發現自己開始一路回「對、對、對」，代表雙方已經一致，grilling 快收尾了（[38:49](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2329s)）。
 
-這一版匯出圖右邊還有一條小白條。agent 打算先在自己的瀏覽器重現，再讀像素顏色找出白色從哪裡來（[39:15](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2355s)），他說「這一代的 agent 似乎非常、非常擅長這件事」（[39:33](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2373s)）。他有一點不滿：agent 沿用了已用到 260k token 的子 agent，已經相當深入 dumb zone（[39:54](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2394s)）。結果 Claude 回覆說白條不算問題，只是 Windows 125% 縮放下預覽圖最後一欄像素只畫了一部分（[42:30](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2550s)）。
+這一版匯出圖右邊還有一條小白條。agent 打算先在自己的瀏覽器重現白條，再讀像素顏色找出白色從哪裡來（[39:15](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2355s)）。對這種自己動手查的做法，他說「這一代的 agent 似乎非常、非常擅長這件事」（[39:33](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2373s)）。他有一點不滿：agent 沿用了已用到 260k token 的子 agent，已經相當深入 dumb zone（[39:54](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2394s)；dumb zone 見下一節）。結果 Claude 回覆說白條不算問題，只是 Windows 125% 縮放下預覽圖最後一欄像素只畫了一部分（[42:30](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2550s)）。
 
 ## smart zone 與 dumb zone
 
@@ -119,7 +119,7 @@ grilling 中途，agent 就問要不要先做幾種編輯介面的原型（[12:5
 ![示意圖：左邊 4 個 token 之間有 6 條關係線，中間 8 個 token 之間有 28 條，右邊 12 個 token 之間有 66 條，關係線密到幾乎連成一片](images/fig-quadratic-zh.svg)
 *圖說：本文依講者的口頭解釋繪製的示意圖，只表達「關係數隨 token 數平方增加」這個說法，不代表任何模型的實際門檻。*
 
-至於什麼時候該清 context，以前幾代模型大概 120k 就得清（[41:32](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2492s)），現在「它真的更像是一種成本與最佳化的問題」（[41:50](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2510s)）。agent 在 dumb zone 未必會產生幻覺，比較像是成果變差（[42:00](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2520s)）；context 到了約 750k token 時運作非常昂貴，快取一失效，先前所有 token 都要再算一次、再計一次費（[42:17](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2537s)）。
+至於什麼時候該清 context，他說以前幾代模型大概 120k 就得清（[41:32](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2492s)），現在「它真的更像是一種成本與最佳化的問題」（[41:50](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2510s)）。agent 在 dumb zone 未必會產生幻覺，比較像是成果變差（[42:00](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2520s)）；context 到了約 750k token 時運作非常昂貴，快取一失效，先前所有 token 都要再算一次、再計一次費（[42:17](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2537s)）。
 
 ## spec、ticket 與 compact：把決策空間縮到最小
 
@@ -131,28 +131,30 @@ grilling 中途，agent 就問要不要先做幾種編輯介面的原型（[12:5
 
 回來時 PR 已經在那裡，畫面上的數字是新增 21,000 行（[48:21](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2901s)）；開場他說的是「我想大概有 25,000 行」（[01:11](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=71s)）。接下來他做了平常不做的事：在觀眾面前審這個 PR（[48:44](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2924s)）。他想試另一種把大 PR 拆小的方法，「我目前還沒有專門處理這個的 skill」（[48:58](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2938s)）。
 
-他請 agent 用堆疊式 diff 拆成較小的區塊，每塊理想上能獨立審查，希望是一連串雙向門，最後以一道單向門作結；定義在 [pr skill](https://github.com/mattpocock/skills/blob/main/skills/engineering/pr/SKILL.md) 裡（[49:05](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2945s)）。雙向門的 PR **合併後隨時可以 revert**，單向門則是合併後就非常難以還原的 PR（[49:30](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2970s)）。他說 agent 相當擅長把大 PR 拆成小 PR（[49:53](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2993s)）。最後一塊特別大，他就問能不能用 feature flag 讓 thumbnail diagram 先上線、必要時再收回，並坦白自己有點像是在角色扮演，平常這個 repo 只是個人軟體（[50:17](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3017s)）。agent 把它再拆成四個，合併最後一個 PR 時才把 flag 打開（[51:03](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3063s)），總共 7 個 PR（[51:31](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3091s)）。第一個是術語表詞條、diagram component 和 ADR-060（[51:47](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3107s)），第二個是抽出共用的 diagram 編輯器（[51:56](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3116s)）。
+他請 agent 用堆疊式 diff 拆成較小的區塊，每塊理想上能獨立審查，希望是一連串雙向門，最後以一道單向門作結；定義在 [pr skill](https://github.com/mattpocock/skills/blob/main/skills/engineering/pr/SKILL.md) 裡（[49:05](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2945s)）。雙向門的 PR **合併後隨時可以 revert**，單向門則是合併後就非常難以還原的 PR（[49:30](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2970s)）。他說 agent 相當擅長把大 PR 拆成小 PR（[49:53](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2993s)）。
+
+拆出來的最後一塊特別大，他就問能不能用 feature flag 讓 thumbnail diagram 先上線、必要時再收回，並坦白自己有點像是在角色扮演，平常這個 repo 只是個人軟體（[50:17](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3017s)）。agent 把它再拆成四個，合併最後一個 PR 時才把 flag 打開（[51:03](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3063s)），總共 7 個 PR（[51:31](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3091s)）。第一個是術語表詞條、diagram component 和 ADR-060（[51:47](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3107s)），第二個是抽出共用的 diagram 編輯器（[51:56](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3116s)）。
 
 ![PR 堆疊示意圖：一個大 PR 拆成 7 個依序合併的小 PR，第一個是術語表詞條、diagram component 與 ADR-060，第二個是抽出共用的 diagram 編輯器，中間標出講者念到的約 500 行與約 2,500 行，其中一個是唯一必審的只新增欄位 migration，最後一個 PR 合併時才打開 feature flag](images/fig-pr-stack-zh.svg)
 *圖說：本文依影片 48:43 到 57:50 的口述整理的示意圖；行數是講者看畫面時念出的數字，影片沒有逐一說明每個 PR 的大小，中間各 PR 只標出他提到的內容。*
 
 ### 他也審產出程式碼的系統
 
-這次逐行看，是因為知道觀眾想看他怎麼審（[52:04](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3124s)），他不認為每個人都需要這樣做。審查當然要確認東西能動（[52:27](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3147s)）；這次他是唯一的使用者，所以全部合併、最後再來檢查（[52:39](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3159s)）。看程式碼的另一個用意是，他也關心產出這段程式碼的系統（[52:51](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3171s)）。
+他這次逐行審，是因為知道觀眾想看他怎麼審（[52:04](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3124s)）；他不認為每個人都需要逐行審。審查當然要確認東西能動（[52:27](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3147s)）；這次他是唯一的使用者，所以全部合併、最後再來檢查（[52:39](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3159s)）。看程式碼的另一個用意是，他也關心產出這段程式碼的系統（[52:51](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3171s)）。
 
 > 重點：看到出錯的地方或不喜歡的 pattern，他想做的是建一條 lint rule 之類的東西，讓它不再發生（[52:55](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3175s)）。
 
-所謂不喜歡，是他對那件事有個假說，「認為它正以負面的方式影響我 agent 運作的環境」（[53:09](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3189s)）。他的 review comment 大致三類：
+他說的不喜歡，是指他對那個 pattern 有個假說，「認為它正以負面的方式影響我 agent 運作的環境」（[53:09](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3189s)）。這次他的 review comment 大致分三類：
 
 - 註解太多，會讓 agent 要更新的面積變大（[53:24](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3204s)）。
 - 用 `as` 欺騙 TypeScript，他要禁止 shared utilities 以外的 `as`（[54:07](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3247s)）；`Pick` 加交集型別也改用 `interface extends`。
 - `useSearchParams` 用魔術字串抓參數，改名時不會有型別錯誤，他要更型別安全的設計（[55:40](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3340s)）。
 
-方向很明白：「我試圖逼它設計出能消除所有細微模糊處、替 agent 省去所有決策的 API。」（[55:33](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3333s)）規則不必第一天就強制，可以**棘輪式逐步收緊**（[55:06](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3306s)）。
+他的方向很明白：「我試圖逼它設計出能消除所有細微模糊處、替 agent 省去所有決策的 API。」（[55:33](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3333s)）規則不必第一天就強制，可以**棘輪式逐步收緊**（[55:06](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3306s)）。
 
-接下來的 PR，他念到 500 行（[56:21](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3381s)）與大約 2,500 行，字幕沒說是那個 PR 的大小還是累計（[56:39](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3399s)）。這些意見他都不當成 blocking；整串 PR 裡他唯一認為必須審的，是替 thumbnail diagram 只新增欄位的那個 migration（[57:06](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3426s)）。最後他請 agent 依序合併所有 PR，合併放到背景子 agent 去跑（[57:54](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3474s)）。
+接下來的 PR，他念到 500 行（[56:21](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3381s)）與大約 2,500 行，字幕沒說是那個 PR 的大小還是累計（[56:39](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3399s)）。這些 review comment 他都不當成 blocking；整串 PR 裡他唯一認為必須審的，是替 thumbnail diagram 只新增欄位的那個 migration（[57:06](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3426s)）。最後他請 agent 依序合併所有 PR，合併放到背景子 agent 去跑（[57:54](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3474s)）。
 
-## retro：把審查意見變成系統
+## retro：把 review comment 變成系統
 
 合併在背景跑的時候，他用同一個 session 叫用 retro，請它看這次執行的所有 agent session，也把他的 review comment 抓進來（[58:35](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3515s)）。對話雖然 compact 過，之前的 session 都存在本機硬碟，仍然讀得到（[58:47](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3527s)）。Claude 回覆說，它正派 agent 梳理 30 幾個 session 的逐字紀錄和他的 12 則 review comment（[59:19](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3559s)）。
 
@@ -161,7 +163,7 @@ grilling 中途，agent 就問要不要先做幾種編輯介面的原型（[12:5
 
 Claude 的結論是，12 則 review comment 有同一個根本原因：CVM 的**書面規範沒有涵蓋**這些點（[59:53](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3593s)），coding standards 與前端 state 的文件寫的反而是他否決的 pattern，main 上已經有數千個實例（[59:59](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3599s)）。他的反應是：「看來我顯然是在試圖讓一艘巨大油輪掉頭。」（[1:00:09](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3609s)）
 
-Claude 排序清單的前三項：
+Claude 接著列出一份排序過的清單，前三項是：
 
 - 第 1 項，把 review comment 轉成棘輪式收緊的檢查；Claude 說光是 shared utilities 以外的 `as` 就會抓到 2,000 個實例（[1:00:19](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3619s)），他說這些都該在 repo 開成 issue（[1:01:35](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3695s)）。
 - 第 2 項，修正那些在教被否決 pattern 的文件，他說顯然要做（[1:01:57](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3717s)）。
@@ -171,9 +173,9 @@ Claude 排序清單的前三項：
 
 ## 註解稽核：他要 agent 更激進
 
-註解是清單裡的例外，Claude 說沒有合適的 lint rule。他也說：「是啊，我不知道該拿註解怎麼辦。」（[1:01:06](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3666s)）他提到 Lauren Tan（poteto）直接禁止註解，自己有點想往那個方向走，但考慮分階段（[1:01:08](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3668s)）。Claude 的統計是，新功能 features/diagrams 有 18% 的行數是註解，整個 repo 平均 12%（[1:01:21](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3681s)）。
+回到 retro 清單。第 1 項要把 review comment 轉成檢查，註解卻是例外，Claude 說沒有合適的 lint rule。他也說：「是啊，我不知道該拿註解怎麼辦。」（[1:01:06](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3666s)）他提到 Lauren Tan（poteto）直接禁止註解，自己有點想往那個方向走，但考慮分階段（[1:01:08](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3668s)）。Claude 的統計是，新功能 features/diagrams 有 18% 的行數是註解，整個 repo 平均 12%（[1:01:21](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3681s)）。
 
-稽核回來，Claude 回覆說大約 2,000 行註解裡，大約 940 行現在就可以刪，大約 1,000 行解釋了程式碼裡看不到的原因，另有 7 個註解已經過期（[1:04:23](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3863s)）。他說「這些註解有點像是 agent 放在那裡的遮羞布」（[1:04:49](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3889s)），要它更激進一點，分出三類：可以移進 ADR、可以改成不需要變通的寫法、可以直接刪掉（[1:05:18](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3918s)）。Claude 同意，**變通寫法旁的註解**通常標記著那裡的程式碼本該換個方式設計（[1:05:42](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3942s)）。追問的結果，Claude 說 22 個可以直接刪除、18 個變通寫法需要修改（[1:07:09](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=4029s)），3 個可以寫成 ADR，這 3 個他都同意適合寫成 ADR（[1:07:37](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=4057s)）。
+註解稽核的結果，到 retro 收尾時才回來。Claude 回覆說大約 2,000 行註解裡，大約 940 行現在就可以刪，大約 1,000 行解釋了程式碼裡看不到的原因，另有 7 個註解已經過期（[1:04:23](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3863s)）。他說「這些註解有點像是 agent 放在那裡的遮羞布」（[1:04:49](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3889s)），要它更激進一點，分出三類：可以移進 ADR、可以改成不需要變通的寫法、可以直接刪掉（[1:05:18](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3918s)）。Claude 同意，**變通寫法旁的註解**通常標記著那裡的程式碼本該換個方式設計（[1:05:42](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3942s)）。追問的結果，Claude 說 22 個可以直接刪除、18 個變通寫法需要修改（[1:07:09](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=4029s)），3 個可以寫成 ADR，這 3 個他都同意適合寫成 ADR（[1:07:37](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=4057s)）。
 
 ![兩格長條示意圖：上格是第一次稽核，約 2,000 行註解中約 940 行可刪、約 1,000 行說明程式碼看不出的理由、7 個註解已過期；下格是追問後，22 個可直接刪、18 個變通寫法要改、3 個可寫成 ADR](images/fig-comment-audit-zh.svg)
 *圖說：Claude 的稽核結果，由講者念出；第一次多以行計，第二次字幕沒說單位，兩次範圍也都沒說明，分格呈現，不可相互比較。*
@@ -182,7 +184,7 @@ Claude 排序清單的前三項：
 
 整串 PR 合併到正式環境後，他打開新的縮圖編輯器，擷取臉部、加上文字、畫框（[1:06:07](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3967s)），評語是「還挺不錯的」（[1:06:30](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3990s)）。接下來他會進去做 QA，把可以改進的地方開成 issue，交給 agent 一口氣做完，大概連 grilling 都不用（[1:08:03](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=4083s)）。
 
-片尾他說：「我在一開始的對齊階段最有價值」（[1:08:41](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=4121s)），把一切討論清楚、理解要做什麼、做出原型；最後他也很有用，技術專業派得上用場，能貫徹自己的程式碼標準（[1:08:50](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=4130s)）。grilling 和 retro 是他與系統互動的**兩個主要時間點**（[1:08:59](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=4139s)）。
+片尾他說：「我在一開始的對齊階段最有價值」（[1:08:41](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=4121s)），把一切討論清楚、理解要做什麼、做出原型；到了最後，他說自己也很有用，技術專業派得上用場，能貫徹自己的程式碼標準（[1:08:50](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=4130s)）。grilling 和 retro 是他與系統互動的**兩個主要時間點**（[1:08:59](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=4139s)）。
 
 ![示意圖：橫軸是整個流程，左段標「前段：對齊（grilling 與原型）」、中段標「AFK：agent 自己實作」、右段標「後段：review 與 retro」，左右兩段以深色標示，帶子下方寫著講者自述的兩個主要互動時間點](images/fig-human-touchpoints-zh.svg)
 *圖說：本文依影片 1:08:35 起講者的總結繪製的示意圖。*
@@ -204,7 +206,7 @@ Claude 排序清單的前三項：
 - 工具仍有毛病。他說 auto-compact 仍有點不可靠（[46:53](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2813s)）；agent 會擅自寫詞條、建 ADR（[20:52](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1252s)），也會漏看既有程式碼（[31:14](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1874s)）。
 - 成本與耗時沒有揭露。實作時間只有他事前「大約一小時或 45 分鐘」的預估（[47:28](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2848s)），影片剪過，總 token 用量與實際花費都沒有交代。
 - 數字是自述。行數有開場約 25,000 與畫面上 21,000 兩個說法（[01:11](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=71s)），session 數開場他說「我想我們在這支影片裡大概進行了 30 個 session」（[01:07](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=67s)），user story 數、註解比例與稽核數字也都是他口述或念出 Claude 的回覆，本文沒有逐一核實。
-- 經驗談沒有數據。講為什麼 agent 會更有創意、產出更可預測、agent 擅長拆 PR、決策空間越少表現越好、這一代 agent 似乎很擅長驗證自己的成果，這些是他的經驗談，影片沒有附數據。
+- 經驗談沒有數據。講原因 agent 就更放得開手、產出更可預測、agent 擅長拆 PR、決策空間越少表現越好、這一代 agent 似乎很擅長自己重現問題找原因，這些是他的經驗談，影片沒有附數據。
 - 沒有對照組。他說這套做法比 plan mode 之類的方式更能事先對齊（[09:41](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=581s)），影片沒有用同一個功能比較兩種做法的結果。
 
 ## 重點結論與實際啟示
@@ -212,14 +214,14 @@ Claude 排序清單的前三項：
 下面三件是他實際做的，各自附上適用條件：
 
 1. 他的做法：**對 agent 講為什麼**，不急著講做什麼。需求還模糊、自己都說不清 UI 長什麼樣子時，先描述問題與在意的地方，讓 agent 用追問把選項攤開；這是他的經驗，片中沒有對照。條件（本文推論）：要有時間陪它一題一題回答，並且由人決定何時停。
-2. 他的做法：**先定名稱與術語表**，再談實作。把領域詞彙寫成一份放在 repo 裡、agent 每次都讀得到的檔案，用詞拿不定時，用情境測試把候選名放進實際句子裡比；決策理由寫成 ADR，他希望由他在 grilling 中決定，不讓 agent 自己建。條件（本文推論）：適合會長期維護的 repo。diff 很小的改動，他自己也是直接做。
-3. 他的做法：把 review 意見**交給 retro**，讓它變成 lint rule 提案、文件修正或 issue。每則意見背後先有一個假說：這個 pattern 會讓 agent 的工作環境變差；規則可以先不強制、再逐步收緊。條件（本文推論）：session 紀錄要保存下來讓 retro 讀得到，也要有 issue tracker 承接後續。他用的是 GitHub。
+2. 他的做法：**先定名稱與術語表**，再談實作。把領域詞彙寫成一份放在 repo 裡、agent 每次都讀得到的檔案，用詞拿不定時，用情境測試把候選名放進實際句子裡比；決策理由寫成 ADR，但要不要建，他希望在 grilling 中由自己決定，不是 agent 未經詢問就建。條件（本文推論）：適合會長期維護的 repo。diff 很小的改動，他自己也是直接做。
+3. 他的做法：把 review comment **交給 retro**，讓它變成 lint rule 提案、文件修正或 issue。每則 comment 背後先有一個假說：這個 pattern 會讓 agent 的工作環境變差；規則可以先不強制、再逐步收緊。條件（本文推論）：session 紀錄要保存下來讓 retro 讀得到，也要有 issue tracker 承接後續。他用的是 GitHub。
 
 三件都出自一個人的個人專案與一次剪輯過的錄影，適用範圍見上一節〈讀這支影片要記得的限制〉。
 
 ## 製作說明：這篇導讀由 AI 模型完成
 
-本導讀的分析與撰稿由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿。影片內容依 YouTube 機器字幕（en-orig），未對照原音逐句校對，少數語意不明的句子沒有引用。主控為 Claude Sonnet 5.5；逐句繁中翻譯由 agy（gemini-3.8-flash-medium）完成，再由 Sonnet 逐章修詞、Opus 統一審查用詞與程度詞；撰稿由 Opus 負責；查證由 Sonnet subagent 進行，並經主控核對一手來源，重要說法須有一手來源，只有單方者降級標示；查證只用 Claude 系 subagent 與 gh 等工具，沒有另請其他模型交叉查證。圖片中，資訊型的示意圖由 Sonnet subagent 依文中資料以程式繪成 SVG，並經檢查；封面與比喻插畫由 Codex 的圖像生成工具（imagegen）製作。初稿之後，審稿 A（事實）與審稿 B（編輯）由兩位獨立的 Opus subagent 平行進行、互不參照，兩份意見由 Opus 合併修稿，再由一位 Opus subagent 做終審，再由一位 Opus 依總編輯準則潤稿並標示重點；因初版篇幅過長，最後另由一位 Opus 精簡正文。獨立評分後，又由一位 Opus 依評分意見再精簡一次。引文的中文是翻譯而非講者原話，字幕可能有誤。完整譯文見[全文譯本](translation-zh.html)，雙語同步播放器見[字幕同步播放器](player.html)。
+本導讀的分析與撰稿由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿。影片內容依 YouTube 機器字幕（en-orig），未對照原音逐句校對，少數語意不明的句子沒有引用。主控為 Claude Sonnet 5.5；逐句繁中翻譯由 agy（gemini-3.8-flash-medium）完成，再由 Sonnet 逐章修詞、Opus 統一審查用詞與程度詞；撰稿由 Opus 負責；查證由 Sonnet subagent 進行，並經主控核對一手來源，重要說法須有一手來源，只有單方者降級標示；查證只用 Claude 系 subagent 與 gh 等工具，沒有另請其他模型交叉查證。圖片中，資訊型的示意圖由 Sonnet subagent 依文中資料以程式繪成 SVG，並經檢查；封面與比喻插畫由 Codex 的圖像生成工具（imagegen）製作。初稿之後，審稿 A（事實）與審稿 B（編輯）由兩位獨立的 Opus subagent 平行進行、互不參照，兩份意見由 Opus 合併修稿，再由一位 Opus subagent 做終審，再由一位 Opus 依總編輯準則潤稿並標示重點；因初版篇幅過長，最後另由一位 Opus 精簡正文。獨立評分後，又由一位 Opus 依評分意見再精簡一次。發布後，再由一位 Opus 依總編輯準則通讀潤稿，統一前後文用語與語氣。引文的中文是翻譯而非講者原話，字幕可能有誤。完整譯文見[全文譯本](translation-zh.html)，雙語同步播放器見[字幕同步播放器](player.html)。
 
 ## 來源清單
 
