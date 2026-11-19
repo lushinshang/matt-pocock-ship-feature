@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 644" width="480" height="644" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>retro：從輸入到四條去路（兩條來自同一個根本原因）</title>
+<desc>左側兩個輸入（約 30 個 session 的紀錄、12 則 review comment）進入 retro，找出同一個根本原因，再分成四條去路：其中棘輪式 lint rule 提案與修正教錯的文件兩條來自同一個根本原因，替 skills 開 issue 與約 20 個 issue 交給 agent 兩條直接從 retro 分出；一條回饋線回到輸入端。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker></defs>
+<rect width="480" height="644" fill="#fbfaf7"/>
+<rect x="30" y="20" width="410" height="50" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+<text x="235.0" y="51" font-size="15" fill="#222222" text-anchor="middle">約 30 個 session 的紀錄</text>
+<rect x="30" y="82" width="410" height="50" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+<text x="235.0" y="113" font-size="15" fill="#222222" text-anchor="middle">12 則 review comment</text>
+<path d="M235.0 72 L235.0 80" stroke="#444" stroke-width="2" fill="none"/>
+<path d="M235.0 134 L235.0 160" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="190" y="162" width="100" height="46" rx="23" fill="#3d7049" stroke="#3d7049" stroke-width="1.5"/>
+<text x="240" y="192" font-size="17" fill="#ffffff" font-weight="bold" text-anchor="middle" font-family="Menlo, Consolas, monospace">retro</text>
+<path d="M240 210 L240 234" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="30" y="236" width="410" height="64" rx="8" fill="#fdf1e3" stroke="#d9822b" stroke-width="2.5"/>
+<text x="235.0" y="273" font-size="13" fill="#222222" text-anchor="middle">同一個根本原因：書面規範沒有涵蓋，文件反而教了相反的寫法</text>
+<path d="M235.0 302 L235.0 318 L40 318 L40 416" stroke="#444" stroke-width="2" fill="none"/>
+<rect x="64" y="332" width="376" height="48" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2"/>
+<text x="252.0" y="362" font-size="14" fill="#222222" text-anchor="middle">棘輪式 lint rule 提案，開成 issue</text>
+<path d="M40 356 L61 356" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M440 356 L466 356" stroke="#7a7a72" stroke-width="2" fill="none"/>
+<rect x="64" y="392" width="376" height="48" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2"/>
+<text x="252.0" y="422" font-size="14" fill="#222222" text-anchor="middle">修正教錯的文件</text>
+<path d="M40 416 L61 416" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M440 416 L466 416" stroke="#7a7a72" stroke-width="2" fill="none"/>
+<path d="M188 185 L20 185 L20 536" stroke="#444" stroke-width="2" fill="none"/>
+<rect x="64" y="452" width="376" height="48" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2"/>
+<text x="252.0" y="482" font-size="14" fill="#222222" text-anchor="middle">替 skills 開 issue</text>
+<path d="M20 476 L61 476" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M440 476 L466 476" stroke="#7a7a72" stroke-width="2" fill="none"/>
+<rect x="64" y="512" width="376" height="48" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2"/>
+<text x="252.0" y="542" font-size="14" fill="#222222" text-anchor="middle">約 20 個 issue 交給 agent</text>
+<path d="M20 536 L61 536" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M440 536 L466 536" stroke="#7a7a72" stroke-width="2" fill="none"/>
+<path d="M466 356 L466 594 L8 594 L8 52  L27 52" stroke="#7a7a72" stroke-width="2.5" fill="none" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<path d="M466 536 L466 594" stroke="#7a7a72" stroke-width="2" fill="none"/>
+<text x="240" y="585" font-size="14" fill="#222222" font-weight="bold" text-anchor="middle">下次 agent 讀到的是新規則</text>
+<text x="240" y="628" font-size="12" fill="#555555" text-anchor="middle">依影片 57:50 到 1:04:16 整理，數字為口述或估計</text>
+</svg>

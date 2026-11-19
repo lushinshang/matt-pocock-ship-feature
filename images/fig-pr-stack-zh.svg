@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>一個大 PR 拆成 7 個依序合併的 PR</title>
+<desc>左邊一個大 PR，右邊 7 個小 PR 堆疊：第一個含術語表詞條、diagram component、ADR-060，第二個抽出共用的 diagram 編輯器，中間幾個只標講者提到的內容，最後一個合併時打開 feature flag。圖例說明雙向門與單向門。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker></defs>
+<rect width="1000" height="560" fill="#fbfaf7"/>
+<text x="430.0" y="52" font-size="18" fill="#222222" font-weight="bold" text-anchor="middle">拆成 7 個依序合併的 PR</text>
+<rect x="24" y="190" width="150" height="120" rx="10" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1.5"/>
+<text x="99" y="258" font-size="18" fill="#ffffff" font-weight="bold" text-anchor="middle">一個大 PR</text>
+<path d="M178 250 L216 250" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M242 84 L232 84 L232 440 L242 440" stroke="#666" stroke-width="2" fill="none"/>
+<rect x="250" y="396" width="360" height="44" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+<text x="430.0" y="424" font-size="14" fill="#222222" text-anchor="middle">術語表詞條、diagram component、ADR-060</text>
+<rect x="250" y="344" width="360" height="44" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+<text x="430.0" y="372" font-size="14" fill="#222222" text-anchor="middle">抽出共用的 diagram 編輯器</text>
+<rect x="250" y="292" width="360" height="44" rx="8" fill="#e8e8e4" stroke="#b5b4aa" stroke-width="1.5"/>
+<rect x="250" y="240" width="360" height="44" rx="8" fill="#e8e8e4" stroke="#b5b4aa" stroke-width="1.5"/>
+<rect x="250" y="188" width="360" height="44" rx="8" fill="#e8e8e4" stroke="#b5b4aa" stroke-width="1.5"/>
+<rect x="250" y="136" width="360" height="44" rx="8" fill="#e8e8e4" stroke="#b5b4aa" stroke-width="1.5"/>
+<rect x="250" y="84" width="360" height="44" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="430.0" y="112" font-size="14" fill="#222222" text-anchor="middle">最後一個：合併時打開 feature flag</text>
+<path d="M620 136 L630 136 L630 336 L620 336" stroke="#666" stroke-width="2" fill="none"/>
+<text x="644" y="230.0" font-size="13" fill="#222222" text-anchor="start">中間各 PR：講者念到約 500 行、約 2,500 行</text>
+<text x="644" y="254.0" font-size="13" fill="#222222" text-anchor="start">其中一個是只新增欄位的 migration，講者唯一認為必審</text>
+<path d="M36 500 L84 500" stroke="#444" stroke-width="2.5" fill="none" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="100" y="505" font-size="14" fill="#222222" text-anchor="start">雙向門：合併後隨時可以 revert</text>
+<path d="M526 500 L574 500" stroke="#444" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+<text x="590" y="505" font-size="14" fill="#222222" text-anchor="start">單向門：合併後很難還原</text>
+<text x="976" y="540" font-size="13" fill="#555555" text-anchor="end">依影片 48:43 到 57:50 的口述整理</text>
+</svg>

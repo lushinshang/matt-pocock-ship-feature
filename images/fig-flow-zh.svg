@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>從想法到 retro 的流程：每一站由人主導、agent 主導或兩者對話</title>
+<desc>依影片順序列出十站，每站標示開始時間與主導者；AFK 實作一站以虛線框表示人不在場。主導者是本文依字幕的歸納。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker></defs>
+<rect width="960" height="440" fill="#fbfaf7"/>
+<rect x="30" y="40" width="156" height="120" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="3"/>
+<text x="108.0" y="66" font-size="13" fill="#555555" text-anchor="middle">1:33</text>
+<text x="108.0" y="92" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">想法</text>
+<rect x="78.33" y="124" width="59.34" height="24" rx="12.0" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1"/>
+<text x="108.0" y="140.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">人主導</text>
+<path d="M189 100.0 L213 100.0" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="216" y="40" width="156" height="120" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="3"/>
+<text x="294.0" y="66" font-size="13" fill="#555555" text-anchor="middle">4:42</text>
+<text x="294.0" y="92" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle" font-family="Menlo, Consolas, monospace">grilling</text>
+<text x="294.0" y="112" font-size="12" fill="#555555" text-anchor="middle">術語表與 ADR</text>
+<rect x="229.4666" y="124" width="129.0668" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="294.0" y="140.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">人與 agent 對話</text>
+<path d="M375 100.0 L399 100.0" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="402" y="40" width="156" height="120" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="3"/>
+<text x="480.0" y="66" font-size="13" fill="#555555" text-anchor="middle">22:37</text>
+<text x="480.0" y="92" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">情境測試</text>
+<rect x="415.46659999999997" y="124" width="129.0668" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="480.0" y="140.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">人與 agent 對話</text>
+<path d="M561 100.0 L585 100.0" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="588" y="40" width="156" height="120" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="3"/>
+<text x="666.0" y="66" font-size="13" fill="#555555" text-anchor="middle">33:13</text>
+<text x="666.0" y="92" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">原型</text>
+<rect x="601.4666" y="124" width="129.0668" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="666.0" y="140.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">人與 agent 對話</text>
+<path d="M747 100.0 L771 100.0" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="774" y="40" width="156" height="120" rx="8" fill="#ffffff" stroke="#d9822b" stroke-width="3"/>
+<text x="852.0" y="66" font-size="13" fill="#555555" text-anchor="middle">42:28</text>
+<text x="852.0" y="92" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">spec 與 ticket</text>
+<rect x="805.2428" y="124" width="93.5144" height="24" rx="12.0" fill="#d9822b" stroke="#d9822b" stroke-width="1"/>
+<text x="852.0" y="140.55" font-size="13" fill="#222222" font-weight="bold" text-anchor="middle">agent 主導</text>
+<rect x="30" y="220" width="156" height="120" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="3"/>
+<text x="108.0" y="246" font-size="13" fill="#555555" text-anchor="middle">46:28</text>
+<text x="108.0" y="272" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle" font-family="Menlo, Consolas, monospace">compact</text>
+<rect x="78.33" y="304" width="59.34" height="24" rx="12.0" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1"/>
+<text x="108.0" y="320.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">人主導</text>
+<path d="M189 280.0 L213 280.0" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="216" y="220" width="156" height="120" rx="8" fill="#ffffff" stroke="#d9822b" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="294.0" y="246" font-size="13" fill="#555555" text-anchor="middle">47:39</text>
+<text x="294.0" y="272" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">AFK 實作</text>
+<rect x="247.2428" y="304" width="93.5144" height="24" rx="12.0" fill="#d9822b" stroke="#d9822b" stroke-width="1"/>
+<text x="294.0" y="320.55" font-size="13" fill="#222222" font-weight="bold" text-anchor="middle">agent 主導</text>
+<path d="M375 280.0 L399 280.0" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="402" y="220" width="156" height="120" rx="8" fill="#ffffff" stroke="#d9822b" stroke-width="3"/>
+<text x="480.0" y="246" font-size="13" fill="#555555" text-anchor="middle">48:43</text>
+<text x="480.0" y="272" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">拆成 7 個 PR</text>
+<rect x="433.2428" y="304" width="93.5144" height="24" rx="12.0" fill="#d9822b" stroke="#d9822b" stroke-width="1"/>
+<text x="480.0" y="320.55" font-size="13" fill="#222222" font-weight="bold" text-anchor="middle">agent 主導</text>
+<path d="M561 280.0 L585 280.0" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="588" y="220" width="156" height="120" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="3"/>
+<text x="666.0" y="246" font-size="13" fill="#555555" text-anchor="middle">51:30</text>
+<text x="666.0" y="272" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">人工審查</text>
+<rect x="636.33" y="304" width="59.34" height="24" rx="12.0" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1"/>
+<text x="666.0" y="320.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">人主導</text>
+<path d="M747 280.0 L771 280.0" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="774" y="220" width="156" height="120" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="3"/>
+<text x="852.0" y="246" font-size="13" fill="#555555" text-anchor="middle">57:50</text>
+<text x="852.0" y="272" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle" font-family="Menlo, Consolas, monospace">retro</text>
+<rect x="787.4666" y="304" width="129.0668" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="852.0" y="320.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">人與 agent 對話</text>
+<path d="M852.0 163 L852.0 190 L108.0 190 L108.0 217" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="30" y="372" width="62.52" height="24" rx="12.0" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1"/>
+<text x="61.260000000000005" y="388.9" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">人主導</text>
+<rect x="116.52000000000001" y="372" width="99.3232" height="24" rx="12.0" fill="#d9822b" stroke="#d9822b" stroke-width="1"/>
+<text x="166.1816" y="388.9" font-size="14" fill="#222222" font-weight="bold" text-anchor="middle">agent 主導</text>
+<rect x="239.84320000000002" y="372" width="137.61040000000003" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="308.64840000000004" y="388.9" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">人與 agent 對話</text>
+<text x="930" y="418" font-size="13" fill="#555555" text-anchor="end">依影片整理的示意圖</text>
+</svg>

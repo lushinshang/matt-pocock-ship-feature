@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 680" width="480" height="680" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>token 越多，要追蹤的關係越多</title>
+<desc>三個並排的示意：4 個點兩兩連線共 6 條、8 個點共 28 條、12 個點共 66 條，連線密到幾乎連成一片。依講者的口頭解釋繪製，只表達關係數隨點數平方增加，不代表任何模型的門檻。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker></defs>
+<rect width="480" height="680" fill="#fbfaf7"/>
+<text x="20" y="40" font-size="19" fill="#222222" font-weight="bold" text-anchor="start">token 越多，要追蹤的關係越多</text>
+<rect x="20" y="62" width="440" height="172" rx="8" fill="#ffffff" stroke="#c9c8c0" stroke-width="1.5"/>
+<line x1="120.0" y1="86.0" x2="182.0" y2="148.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="86.0" x2="120.0" y2="210.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="86.0" x2="58.0" y2="148.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="148.0" x2="120.0" y2="210.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="148.0" x2="58.0" y2="148.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="210.0" x2="58.0" y2="148.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<circle cx="120.0" cy="86.0" r="5" fill="#1f3a5f"/>
+<circle cx="182.0" cy="148.0" r="5" fill="#1f3a5f"/>
+<circle cx="120.0" cy="210.0" r="5" fill="#1f3a5f"/>
+<circle cx="58.0" cy="148.0" r="5" fill="#1f3a5f"/>
+<text x="240" y="146" font-size="20" fill="#222222" font-weight="bold" text-anchor="start">4 個 token</text>
+<text x="240" y="176" font-size="17" fill="#1f3a5f" text-anchor="start">6 組關係</text>
+<rect x="20" y="246" width="440" height="172" rx="8" fill="#ffffff" stroke="#c9c8c0" stroke-width="1.5"/>
+<line x1="120.0" y1="270.0" x2="163.8" y2="288.2" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="270.0" x2="182.0" y2="332.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="270.0" x2="163.8" y2="375.8" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="270.0" x2="120.0" y2="394.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="270.0" x2="76.2" y2="375.8" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="270.0" x2="58.0" y2="332.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="270.0" x2="76.2" y2="288.2" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="163.8" y1="288.2" x2="182.0" y2="332.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="163.8" y1="288.2" x2="163.8" y2="375.8" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="163.8" y1="288.2" x2="120.0" y2="394.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="163.8" y1="288.2" x2="76.2" y2="375.8" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="163.8" y1="288.2" x2="58.0" y2="332.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="163.8" y1="288.2" x2="76.2" y2="288.2" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="332.0" x2="163.8" y2="375.8" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="332.0" x2="120.0" y2="394.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="332.0" x2="76.2" y2="375.8" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="332.0" x2="58.0" y2="332.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="332.0" x2="76.2" y2="288.2" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="163.8" y1="375.8" x2="120.0" y2="394.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="163.8" y1="375.8" x2="76.2" y2="375.8" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="163.8" y1="375.8" x2="58.0" y2="332.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="163.8" y1="375.8" x2="76.2" y2="288.2" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="394.0" x2="76.2" y2="375.8" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="394.0" x2="58.0" y2="332.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="394.0" x2="76.2" y2="288.2" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="76.2" y1="375.8" x2="58.0" y2="332.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="76.2" y1="375.8" x2="76.2" y2="288.2" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="58.0" y1="332.0" x2="76.2" y2="288.2" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<circle cx="120.0" cy="270.0" r="5" fill="#1f3a5f"/>
+<circle cx="163.8" cy="288.2" r="5" fill="#1f3a5f"/>
+<circle cx="182.0" cy="332.0" r="5" fill="#1f3a5f"/>
+<circle cx="163.8" cy="375.8" r="5" fill="#1f3a5f"/>
+<circle cx="120.0" cy="394.0" r="5" fill="#1f3a5f"/>
+<circle cx="76.2" cy="375.8" r="5" fill="#1f3a5f"/>
+<circle cx="58.0" cy="332.0" r="5" fill="#1f3a5f"/>
+<circle cx="76.2" cy="288.2" r="5" fill="#1f3a5f"/>
+<text x="240" y="330" font-size="20" fill="#222222" font-weight="bold" text-anchor="start">8 個 token</text>
+<text x="240" y="360" font-size="17" fill="#1f3a5f" text-anchor="start">28 組關係</text>
+<rect x="20" y="430" width="440" height="172" rx="8" fill="#ffffff" stroke="#c9c8c0" stroke-width="1.5"/>
+<line x1="120.0" y1="454.0" x2="151.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="454.0" x2="173.7" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="454.0" x2="182.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="454.0" x2="173.7" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="454.0" x2="151.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="454.0" x2="120.0" y2="578.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="454.0" x2="89.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="454.0" x2="66.3" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="454.0" x2="58.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="454.0" x2="66.3" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="454.0" x2="89.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="462.3" x2="173.7" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="462.3" x2="182.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="462.3" x2="173.7" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="462.3" x2="151.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="462.3" x2="120.0" y2="578.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="462.3" x2="89.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="462.3" x2="66.3" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="462.3" x2="58.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="462.3" x2="66.3" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="462.3" x2="89.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="485.0" x2="182.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="485.0" x2="173.7" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="485.0" x2="151.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="485.0" x2="120.0" y2="578.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="485.0" x2="89.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="485.0" x2="66.3" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="485.0" x2="58.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="485.0" x2="66.3" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="485.0" x2="89.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="516.0" x2="173.7" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="516.0" x2="151.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="516.0" x2="120.0" y2="578.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="516.0" x2="89.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="516.0" x2="66.3" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="516.0" x2="58.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="516.0" x2="66.3" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="182.0" y1="516.0" x2="89.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="547.0" x2="151.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="547.0" x2="120.0" y2="578.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="547.0" x2="89.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="547.0" x2="66.3" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="547.0" x2="58.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="547.0" x2="66.3" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="173.7" y1="547.0" x2="89.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="569.7" x2="120.0" y2="578.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="569.7" x2="89.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="569.7" x2="66.3" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="569.7" x2="58.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="569.7" x2="66.3" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="151.0" y1="569.7" x2="89.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="578.0" x2="89.0" y2="569.7" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="578.0" x2="66.3" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="578.0" x2="58.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="578.0" x2="66.3" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="120.0" y1="578.0" x2="89.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="89.0" y1="569.7" x2="66.3" y2="547.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="89.0" y1="569.7" x2="58.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="89.0" y1="569.7" x2="66.3" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="89.0" y1="569.7" x2="89.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="66.3" y1="547.0" x2="58.0" y2="516.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="66.3" y1="547.0" x2="66.3" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="66.3" y1="547.0" x2="89.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="58.0" y1="516.0" x2="66.3" y2="485.0" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="58.0" y1="516.0" x2="89.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<line x1="66.3" y1="485.0" x2="89.0" y2="462.3" stroke="#1f3a5f" stroke-opacity="0.28" stroke-width="1"/>
+<circle cx="120.0" cy="454.0" r="5" fill="#1f3a5f"/>
+<circle cx="151.0" cy="462.3" r="5" fill="#1f3a5f"/>
+<circle cx="173.7" cy="485.0" r="5" fill="#1f3a5f"/>
+<circle cx="182.0" cy="516.0" r="5" fill="#1f3a5f"/>
+<circle cx="173.7" cy="547.0" r="5" fill="#1f3a5f"/>
+<circle cx="151.0" cy="569.7" r="5" fill="#1f3a5f"/>
+<circle cx="120.0" cy="578.0" r="5" fill="#1f3a5f"/>
+<circle cx="89.0" cy="569.7" r="5" fill="#1f3a5f"/>
+<circle cx="66.3" cy="547.0" r="5" fill="#1f3a5f"/>
+<circle cx="58.0" cy="516.0" r="5" fill="#1f3a5f"/>
+<circle cx="66.3" cy="485.0" r="5" fill="#1f3a5f"/>
+<circle cx="89.0" cy="462.3" r="5" fill="#1f3a5f"/>
+<text x="240" y="514" font-size="20" fill="#222222" font-weight="bold" text-anchor="start">12 個 token</text>
+<text x="240" y="544" font-size="17" fill="#1f3a5f" text-anchor="start">66 組關係</text>
+<text x="20" y="656" font-size="12" fill="#555555" text-anchor="start">依講者的口頭解釋繪製，不代表任何模型的門檻</text>
+<rect x="414.44" y="636" width="45.56" height="24" rx="12.0" fill="#e8e8e4" stroke="#e8e8e4" stroke-width="1"/>
+<text x="437.22" y="652.55" font-size="13" fill="#222222" font-weight="bold" text-anchor="middle">示意</text>
+</svg>

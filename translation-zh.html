@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230f7b6c%27/%3E%3Cpath d=%27M12 46 26 30l8 8 18-22%27 stroke=%27white%27 stroke-width=%277%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<title>Matt Pocock〈Watch me ship a 21,000-line feature with mattpocock/skills〉（非官方繁中譯文）</title>
+<meta name="description" content="Matt Pocock〈Watch me ship a 21,000-line feature with mattpocock/skills〉全文繁體中文譯文，採台灣用語；非官方翻譯（AI 模型翻譯），依 YouTube 機器字幕。">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="Matt Pocock〈Watch me ship a 21,000-line feature with mattpocock/skills〉（非官方繁中譯文）">
+<meta property="og:description" content="Matt Pocock〈Watch me ship a 21,000-line feature with mattpocock/skills〉全文繁體中文譯文，採台灣用語；非官方翻譯（AI 模型翻譯），依 YouTube 機器字幕。">
+<meta property="og:image" content="https://lushinshang.github.io/matt-pocock-ship-feature/images/og-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="封面插畫：夜裡的木頭工作桌，黃銅檯燈照亮一張只有線條與方框的草稿紙，旁邊散著幾張寫著潦草線條的便利貼、一支鉛筆與一杯茶，後方是裝著小零件的架子。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Matt Pocock〈Watch me ship a 21,000-line feature with mattpocock/skills〉（非官方繁中譯文）">
+<meta name="twitter:description" content="Matt Pocock〈Watch me ship a 21,000-line feature with mattpocock/skills〉全文繁體中文譯文，採台灣用語；非官方翻譯（AI 模型翻譯），依 YouTube 機器字幕。">
+<meta name="twitter:image" content="https://lushinshang.github.io/matt-pocock-ship-feature/images/og-hero.jpg">
+<meta property="og:url" content="https://lushinshang.github.io/matt-pocock-ship-feature/translation-zh.html">
+<style>
+:root{
+  --bg:#f9f7f4; --surface:#fffdf9; --ink:#1a1a1a; --muted:#5f5b54; --line:#e4dfd6;
+  --accent:#0f7b6c; --accent-ink:#0b5c51; --note:#f0ebe1; --code:#ece6d8; --link:#1f5f99;
+  --card:#fff6e8; --card-line:#e8c99a; --shadow:0 6px 24px rgba(40,30,10,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1b1a18; --surface:#26241f; --ink:#ece8de; --muted:#aaa497; --line:#3a3730;
+    --accent:#4fc1ad; --accent-ink:#7fd6c6; --note:#2f2c25; --code:#33302a; --link:#8fbde8;
+    --card:#2d2820; --card-line:#5b4a30; --shadow:0 6px 24px rgba(0,0,0,.35);}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+  font:17px/1.7 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:0}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:8px 14px;z-index:300}
+.skip:focus{left:8px;top:8px}
+nav.toc{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.toc ul{list-style:none;margin:0 auto;padding:0 16px;max-width:1120px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  white-space:nowrap;-webkit-overflow-scrolling:touch;min-height:52px;align-items:center}
+nav.toc ul::-webkit-scrollbar{display:none}
+nav.toc a{display:inline-block;padding:8px 12px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:14px;min-height:36px}
+nav.toc a:hover,nav.toc a:focus-visible{background:var(--note);color:var(--ink)}
+a{color:var(--link);overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.page{max-width:1120px;margin:0 auto;padding:0 20px 80px}
+header.hero{padding:56px 0 8px;text-align:center}
+.eyebrow{margin:0 0 8px;color:var(--accent-ink);font-weight:700;letter-spacing:0;font-size:14px}
+h1{margin:0 auto 14px;max-width:820px;font-size:clamp(1.7rem,1.2rem + 2vw,2.6rem);line-height:1.3;text-wrap:balance}
+.byline{margin:0 0 6px;color:var(--muted);font-size:14px}
+.video-link{margin:0 0 28px;font-size:14px}
+figure{margin:32px 0}
+figure img{display:block;width:100%;height:auto;aspect-ratio:var(--ar-d,16/9);object-fit:contain;border-radius:12px;
+  box-shadow:var(--shadow);background:var(--surface);cursor:zoom-in}
+@media (max-width:640px){figure picture img{aspect-ratio:var(--ar-m,9/16)}}
+@media (max-width:640px){figure.hero-figure picture img{max-width:300px;margin:0 auto}}
+figure.hero-figure{max-width:720px;margin-left:auto;margin-right:auto}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+p.figcap{margin:-18px auto 1.4em;text-align:center;font-size:14px;color:var(--muted)}
+figcaption{margin:10px auto 0;max-width:720px;font-size:14px;line-height:1.55;color:var(--muted);text-align:center}
+article{max-width:720px;margin:0 auto}
+article figure.section-figure{margin-left:50%;transform:translateX(-50%);width:min(860px,calc(100vw - 32px))}
+h2{margin:56px 0 12px;font-size:1.55rem;line-height:1.4;scroll-margin-top:72px;text-wrap:balance;
+  border-left:5px solid var(--accent);padding-left:14px;margin-left:-19px}
+h3{margin:36px 0 8px;font-size:1.2rem;line-height:1.45}
+p{margin:0 0 1.1em}
+ul,ol{margin:0 0 1.2em;padding-left:1.4em}
+li{margin:.35em 0}
+strong{font-weight:700}
+code{background:var(--code);padding:.1em .4em;border-radius:5px;font:0.9em ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-word}
+section.summary-card{background:var(--card);border:1px solid var(--card-line);border-radius:14px;padding:6px 22px 10px;margin:24px 0 8px;box-shadow:var(--shadow)}
+section.summary-card h2{margin:14px 0 8px;font-size:1.2rem;border-left:0;padding-left:0;margin-left:0}
+section.summary-card p{margin:0 0 .8em;font-size:16.5px}
+ol.takeaways{padding-left:1.6em}
+ol.takeaways li{margin:.8em 0;padding-left:.2em}
+ol.takeaways li::marker{color:var(--accent-ink);font-weight:700}
+ul.sources li{overflow-wrap:anywhere}
+aside.note{background:var(--note);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:0 0 1.6em;font-size:15px;color:var(--ink)}
+aside.note p,aside.note ul{margin:0 0 .6em}
+aside.note ul{padding-left:1.3em}
+figure.diagram{margin:28px 0}
+.mermaid-scroll{overflow-x:auto;max-width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;-webkit-overflow-scrolling:touch}
+.mermaid-scroll pre{margin:0;font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre;color:var(--ink)}
+.mermaid-scroll svg{display:block;margin:0 auto;height:auto;max-width:100%}
+.table-scroll{overflow-x:auto;margin:0 0 1.6em;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.table-scroll table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;line-height:1.55}
+.table-scroll th,.table-scroll td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.table-scroll th{background:var(--note);font-weight:700}
+.table-scroll tr:last-child td{border-bottom:0}
+.table-scroll td.k{font-weight:600;white-space:nowrap}
+.table-scroll td.nw{white-space:nowrap}
+.table-scroll.wide{margin-left:50%;transform:translateX(-50%);width:min(1040px,calc(100vw - 32px))}
+@media (max-width:640px){.table-scroll.wide{margin-left:0;transform:none;width:auto}}
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible}
+  .table-scroll table{min-width:0}
+  .table-scroll thead{position:absolute;left:-9999px}
+  .table-scroll tr,.table-scroll td{display:block}
+  .table-scroll tr{padding:10px 12px;border-bottom:1px solid var(--line)}
+  .table-scroll tr:last-child{border-bottom:0}
+  .table-scroll td{padding:2px 0;border:0}
+  .table-scroll td.k{color:var(--accent-ink);white-space:normal}
+  .table-scroll td.nw{white-space:normal}
+  .table-scroll td::before{content:attr(data-label) "：";font-weight:700;color:var(--muted);font-size:13px}
+}
+
+p.lede{margin:0 auto 10px;max-width:760px;color:var(--muted);font-size:16px;line-height:1.65}
+footer{max-width:720px;margin:64px auto 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.lightbox{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,18,14,.9);align-items:center;justify-content:center;padding:24px}
+.lightbox.is-open{display:flex}
+.lightbox img{max-width:96vw;max-height:90vh;width:auto;height:auto;border-radius:8px;box-shadow:0 12px 48px rgba(0,0,0,.5);background:#fff}
+.lightbox button{position:absolute;top:14px;right:14px;min-width:44px;min-height:44px;padding:8px 14px;border:0;border-radius:999px;
+  background:#fff;color:#222;font-size:15px;cursor:pointer}
+@media (max-width:760px){
+  h2{margin-left:0;border-left:0;padding-left:0;border-top:3px solid var(--accent);padding-top:10px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .page{padding:0 16px 64px}
+  header.hero{padding-top:36px}
+  h2{font-size:1.35rem}
+  section.summary-card{padding:4px 16px 8px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<nav class="toc" aria-label="章節導覽"><ul><li><a href="#sec-1" title="章節 1：開場：為什麼拍這支（00:00）">1·00:00</a></li><li><a href="#sec-2" title="章節 2：縮圖產生器的功能想法（01:33）">2·01:33</a></li><li><a href="#sec-3" title="章節 3：選哪個 skill 與環境設定（03:08）">3·03:08</a></li><li><a href="#sec-4" title="章節 4：開始 grilling（04:42）">4·04:42</a></li><li><a href="#sec-5" title="章節 5：術語表與領域語言（10:23）">5·10:23</a></li><li><a href="#sec-6" title="章節 6：ADR 與資料模型決策（15:19）">6·15:19</a></li><li><a href="#sec-7" title="章節 7：用情境測試替名稱把關（22:37）">7·22:37</a></li><li><a href="#sec-8" title="章節 8：把剩下的問題一次問完（25:36）">8·25:36</a></li><li><a href="#sec-9" title="章節 9：看原型的幾個版本（33:13）">9·33:13</a></li><li><a href="#sec-10" title="章節 10：原型再迭代與那條白邊（37:21）">10·37:21</a></li><li><a href="#sec-11" title="章節 11：smart zone 與 dumb zone（40:15）">11·40:15</a></li><li><a href="#sec-12" title="章節 12：寫 spec 與 ticket（42:28）">12·42:28</a></li><li><a href="#sec-13" title="章節 13：compact 與 AFK 實作（46:28）">13·46:28</a></li><li><a href="#sec-14" title="章節 14：把大 PR 拆成堆疊式 diff（48:43）">14·48:43</a></li><li><a href="#sec-15" title="章節 15：人工審 PR 堆疊（51:30）">15·51:30</a></li><li><a href="#sec-16" title="章節 16：合併與 retro（57:50）">16·57:50</a></li><li><a href="#sec-17" title="章節 17：註解稽核與禁用註解（64:16）">17·64:16</a></li><li><a href="#sec-18" title="章節 18：試用做好的功能（65:58）">18·65:58</a></li><li><a href="#sec-19" title="章節 19：接下來，以及人的價值在哪（68:02）">19·68:02</a></li></ul></nav>
+<div class="page">
+<header class="hero">
+<p class="eyebrow">全文譯本（非官方）</p>
+<h1>Matt Pocock〈Watch me ship a 21,000-line feature with mattpocock/skills〉（非官方繁中譯文）</h1>
+<p class="lede">Matt Pocock，2026-11-18 上傳，依 YouTube 機器字幕翻譯</p>
+<p class="byline">原影片：Matt Pocock，2026-11-18 上傳　譯本整理：2026-11-20</p>
+</header>
+<main id="main"><article>
+<aside class="note"><p>本頁為非官方繁體中文翻譯，由 AI 模型翻譯，依 YouTube 機器字幕整理，未經人工校稿、也未逐句對照原音，可能有誤。影片由 Matt Pocock 上傳，版權屬原權利人，僅供閱讀與研究；若有出入，以原影片為準。本片為單人講述，不標說話者；畫面上 Claude 的提問與回覆由講者念出。少數句子的中文依上下文判斷，與英文機器字幕用字不同，字幕聽不清處標為（字幕不清）。</p></aside>
+<hr>
+<h2 id="sec-1">章節 1：開場：為什麼拍這支（00:00）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=0s" target="_blank" rel="noopener noreferrer">00:00</a> 你們一次又一次地要我展示我的開發流程究竟是什麼樣子。我之前在這個頻道稍微展示過一點點，但遠遠不夠。而自從我做了那些之後，我手上多了一個全世界 star 數最多的 repo 之一，也就是我的 skills repo，而且它肯定是全世界 star 數最多的 skills repo。因此，我確實認為應該讓你們看到，我如何在比教學更完整的實際演練中使用這些 skill。而在這次的實際演練中，我們會特別著重在兩個 skill 上。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=30s" target="_blank" rel="noopener noreferrer">00:30</a> 第一個將會是 grill-with-docs skill。我認為 grilling（讓 agent 逐題追問、把想法問清楚）其實比多數人想像的更像一種藝術形式。在這次的實際演練中，我把焦點更多放在領域建模的層面上。換句話說，就是那種經典的 DDD（領域驅動設計）技巧，讓你可以基本上說：「好，我已經摸清楚我的應用程式的語言了。」一旦我弄清楚了語言，其實就等於弄清楚了這個應用程式，也弄清楚了我想打造什麼。在這支影片中，你會看到我在一個真實功能上走完整個流程，這個功能我從今以後都會使用，甚至是用來製作這支影片的縮圖。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=61s" target="_blank" rel="noopener noreferrer">01:01</a> 而我接著深入介紹的下一個 skill 是 retro skill，也就是回顧一大批 session。我想我們在這支影片裡大概進行了 30 個 session，並且提出了一連串的改進建議。我將會帶大家完整看過一個我想大概有 25,000 行的超大 PR（pull request）。我會親自做一次人工審查，並向你們展示這樣的人工審查如何回頭影響往後的系統。現在，如果你對這些內容感興趣，而你又希望有一套更結構化的學習方式，那麼我的 AI 寫程式速成課程絕對就是你該去的地方。話不多說，我們馬上開始吧。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=92s" target="_blank" rel="noopener noreferrer">01:32</a> 讓我們開始吧。</p>
+<h2 id="sec-2">章節 2：縮圖產生器的功能想法（01:33）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=93s" target="_blank" rel="noopener noreferrer">01:33</a> 這就是我製作所有課程的地方。我所有的影片都是在這裡製作的。它是一個影片編輯器、縮圖編輯器，也是一個 AI 寫作工具。它能幫我安排排程。它會建立 Shorts 短片。它能做各種各樣的事情。而我現在特別感興趣的部分，是下面這個小小的縮圖產生器。在這裡我可以放上我目前正在製作與剪輯的影片，並建立一張新的縮圖。這基本上是一個擷取我的臉部，然後把臉放進縮圖裡，讓我可以用它來製作 diagram 的流程。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=123s" target="_blank" rel="noopener noreferrer">02:03</a> 例如，我剛剛暫停錄影，就是為了拍下這張靜態照片。這能讓我將它向左或向右移動。然後在我的 diagram 產生器這裡，我基本上可以截圖這個視窗的部分區域。這樣一來，我就可以把它複製並貼到縮圖裡面。所以如果我在這裡按下 Ctrl + V，你可以看到它被貼進來了，然後臉部的去背會由這個很棒的 API 自動完成。我可以調整這些位置，縮圖就完成了。這雖然還算不錯，但我真正想做的是減少這裡的一點摩擦。必須切換到 diagram 檢視畫面很煩，而且……這整個過程手動得讓人厭煩，特別是萬一弄錯的時候。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=161s" target="_blank" rel="noopener noreferrer">02:41</a> 我沒辦法把它們擺得很準。我必須退回去。我必須重新截圖再試一次。基本上我在這裡的彈性不夠。我真正想要的是能夠直接在這個表面上繪圖。換句話說，就是讓 diagram 直接與我在那裡的照片整合在一起。我真的完全不知道該怎麼打造這個功能。我只知道這是我想要的東西。所以我想這會是個很適合拿來做新功能或改進的題材，也能向你們完整展示端到端的整個流程。</p>
+<h2 id="sec-3">章節 3：選哪個 skill 與環境設定（03:08）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=188s" target="_blank" rel="noopener noreferrer">03:08</a> 因此，當我開始一項新工作時，我會先思考這個決策樹，也就是本質上我要從我的 skills 裡面選用哪一個 skill？換言之，你這裡基本上有一個新的 session。你想要建立一項新的工作。你不知道該選什麼。你首先要思考：好，我試圖建立的東西是什麼？而我試圖建立的東西本質上就是一個 diff。舊程式碼庫與新程式碼庫之間的 diff。如果那個 diff 非常小，那你大概直接 oneshot 就行了。所以在繼續之前，你就不用先煩惱 grilling 了。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=219s" target="_blank" rel="noopener noreferrer">03:39</a> 但在這個案例中，我知道我們要打造的東西相當大。因此我打算選擇 grill-with-docs。從那裡開始，如果結果比我想像的大很多，隨時都可以改走 wayfinder，我用它來把最初的 grilling session，跨多個 session 持續進行，發展出我們想打造的那個龐大概念，然後一路做到完成。但我偏好先從 grill-with-docs 開始，因為如果它最後比我想像的小，就意味著我不必承擔執行 wayfinder session 的所有額外負擔。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=250s" target="_blank" rel="noopener noreferrer">04:10</a> 我打算在我的個人 wiki 裡面執行這個流程，那是一個 home repo。如果你不知道什麼是 home repo，可以去看看我關於這個主題的配套影片。我打算使用的 agent 是 Claude Code，因為這是我有訂閱的工具。這是我設定好的環境，也算是我喜歡的。我用的是 Claude Ultra 方案。我有 Opus 5.5，而且是用 medium effort 在跑。當然，我安裝了我所有的 skill，而且在我的 home repo 裡也有許多自訂 skill。我的 home repo 沒有開源，但你們會看到的多數 skill 都是開源的，在 aihero.dev/skills 可以找到。</p>
+<h2 id="sec-4">章節 4：開始 grilling（04:42）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=283s" target="_blank" rel="noopener noreferrer">04:43</a> 所以，我們現在要從 grill-with-docs 開始，接著我會透過語音聽寫來解釋我的問題，而我使用的是 Wispr Flow。在 Course Video Manager 裡面，我們有一個縮圖檢視器。而這個縮圖產生器還算堪用。我喜歡它會要求我、並有點強迫我把臉放到螢幕上這一點。但我不喜歡的是為了附加一張 diagram 而必須經過的那套繁瑣流程。我的大部分 diagram 都是在 tldraw 裡面，以及使用我們自訂的 diagram playground 繪製的，</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=313s" target="_blank" rel="noopener noreferrer">05:13</a> 但我沒有——我真正想要的是能夠直接在我正在檢視的場景中編輯 diagram。也就是說，在縮圖的情境下，換句話說，我希望我的臉能被看見，然後可以在我旁邊直接編輯那個 diagram。我真的不知道在 UI 上我們要怎麼處理，也不知道那看起來會是什麼樣子。所以我認為那裡有很多問題需要解答。我希望大家注意一下我下提示詞方式的幾個重點。第一點是我花了很多心思在「為什麼」（why）上面。我花很多心思思考我想讓 agent 解決的問題本質是什麼。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=345s" target="_blank" rel="noopener noreferrer">05:45</a> 我不一定會給它一個像樣的、確切該做什麼的想法。如果我給它原因，agent 就會更放得開手，自己去產出解決方案，或者也許就解決方案跟我討論一下。反之，如果你帶給它的是「做什麼」（what），說我想要做 X、Y、Z，那它往往不見得能想出那麼有創意的答案。我們可以看到它回傳了一連串 grilling 的追問問題。它首先問的是：什麼是繁瑣流程？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=377s" target="_blank" rel="noopener noreferrer">06:17</a> 附加 diagram 時最令人痛苦的部分是什麼？我會說 A「離開縮圖產生器」很惱人，B 也很惱人，C 也同樣很惱人。老實說，我覺得你這三點全都說中了。縮圖的 diagram 跟影片的 diagram 是同一個嗎？當你在縮圖裡編輯 diagram 時，這些變更是否應該同步回影片所使用的 diagram？這算是一個關於我們希望把這張 diagram 儲存在哪裡的問題。你知道的，像是它是不是應該參考現有的 diagram？因為在這個應用程式中，你可以看到如果我在這裡搜尋，我其實可以搜尋現有的 diagram。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=411s" target="_blank" rel="noopener noreferrer">06:51</a> 我是這樣找到這張 wayfinder diagram 的——哦，我有搜尋功能，不是嗎？所以進到 diagram、輸入 wayfinder，然後搜尋我用過的所有 diagram。例如這張就很不錯。這張是另一張。所以它算是在問我們該如何把這些縮圖裡的 diagram 跟這份清單關聯起來。而且關於 Q2 我不太確定。我不確定。我其實不太確定這裡面的權衡取捨。我想問題在於：我是否希望 diagram 能在主清單裡面被搜尋到？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=442s" target="_blank" rel="noopener noreferrer">07:22</a> 我希望它跟主清單關聯在一起嗎？我不太確定那裡的具體使用情境是什麼。Q3：從頭開始。你是否應該能夠在沒有任何現有 diagram 的情況下，直接在縮圖裡繪製一張新 diagram？針對 Q3，是的，我同意。聽起來不錯。對於 Q3 也是，我可能有點想要能夠搜尋現有的 diagram。我喜歡能夠加入我們既有 component 的那種能力。也許可以搜尋我們已經有的素材，或者我也許可以直接把東西從一個 tldraw 畫布複製貼到另一個上面。我希望大家注意到目前為止我們用來描述這項功能的語言是多麼鬆散。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=473s" target="_blank" rel="noopener noreferrer">07:53</a> 感覺上我們還沒有真正為事物找出合適的名稱。因此我不得不使用很多奇怪的冗長詞彙和捷徑表達方式。在我的腦海中依然不是非常清晰。隨著我們經歷這段 grilling 流程，我們正在打造的東西在我的腦海裡會變得越來越清晰，直到我們為要打造的事物找出一組好用的詞彙。而一旦到了那個階段，我們算是已經把這項功能建出來了。所以 Q4 問說，縮圖裡應該要有一個還是兩個編輯模式？應該只有一個單一的「編輯 diagram」模式，還是另外分開一個「排列」模式？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=504s" target="_blank" rel="noopener noreferrer">08:24</a> 針對 Q4，我認為流程大概應該是我們先拍一張我臉部的照片。然後把這張臉排進畫布中，一旦我的臉就位之後，我們就可以圍繞著我的臉來繪製 diagram，而且我應該要有重新拍照的選項。針對 Q5，臉是固定不動的嗎？針對 Q5，我認為我應該要有能水平移動臉部的選項。這樣一來，就能給我多一點彈性。Q6：這只跟 diagram 有關嗎？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=534s" target="_blank" rel="noopener noreferrer">08:54</a> 對，Q6，我們先讓它只限 diagram 就好。我想不出有什麼情境會需要我在縮圖裡面附加其他東西。我們不想做出第二個 Figma。我們只是想讓這個特定的流程變得更容易。好的。在我們回答這些問題的同時，agent 去啟動了一個背景 agent，要去找我們這裡需要的輔助資訊。所以它實際上直接更動了這裡的其中兩個問題。然後 Q7 問道：「原地編輯 diagram」是否意味著在縮圖框架內嵌入一個被裁切的即時 tldraw 編輯器，並鎖定鏡頭，讓你看見的區域就是縮圖？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=566s" target="_blank" rel="noopener noreferrer">09:26</a> 針對 Q7，我擔心把我們擠進那個較小的空間，會意味著編輯那個東西或縮圖實際上會變得有點痛苦。因此我認為我們可能需要針對幾種不同做法製作原型。這是一個非常詳細的第一輪回答。我們把它發送出去吧。現在你看到這種做法可能會想：好，這比起我目前採用的做法，像是 plan mode，到底有什麼好處？這麼說吧，這個 skill 和這個做法所帶來的效果，就是我們在動手開發之前，先對我們要打造的東西達成共識。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=596s" target="_blank" rel="noopener noreferrer">09:56</a> 這意味著我們將獲得更加可預測的產出成果。我會對我們要打造的東西有更透徹的理解。而在它建構的時候，我就讓它自己跑。但前期這個階段，是我可以（或許和隊友一起）凝聚共識、弄清楚要打造的究竟是什麼的關鍵時刻，釐清我們將用哪些詞彙來描述它，然後從那一刻起直到最後的人工審查，一切基本上都會相當有條不紊地按軌道前進。</p>
+<h2 id="sec-5">章節 5：術語表與領域語言（10:23）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=623s" target="_blank" rel="noopener noreferrer">10:23</a> 所以 Q2，它正在重新表述這個問題。它問的是：縮圖的 diagram 算是真正的 diagram 嗎？到了這個階段，我們大概應該談談它所謂「真正的 diagram」到底是什麼意思。這是在 Course Video Manager 的 repo 裡面。而這是一份術語檔，是我的得意之作。當我談到專案裡的語言，我真正指的是你用來描述某些事物的詞彙。而在這個相當龐大、大約有 560 行的檔案中，我們定義了所有存在於這個課程——抱歉，是存在於這個 repo 裡面、與這個專案相關的主要概念。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=661s" target="_blank" rel="noopener noreferrer">11:01</a> 而我們這裡真正討論的內容是一個 diagram。所以有一整個章節專門講 diagram。因此一個 diagram 其實是一組 diagram snapshot，也就是拍 clip 當下該 diagram 繪圖的複本。換句話說，在我的影片編輯器裡，它是跟 diagram 連結在一起的。所以我可以看到影片中每個時間點我用的是哪個 diagram。這裡有 active diagram。也就是作者目前正在繪製的 diagram。現在我們有一個動作叫做 restore to head。也就是當我們把較舊的 diagram snapshot 重新載入為 active diagram 時。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=693s" target="_blank" rel="noopener noreferrer">11:33</a> 還有所謂的 preserved snapshot，也就是即使沒有任何 clip 使用它，依然保存在該 diagram 時間軸裡的 diagram snapshot。你可以開始看出，這些定義勾勒出這項功能非常清楚的輪廓。而我們現在在做的事，有點像是在試著補充進去，試著釐清我們的新功能在現有架構中位於什麼位置。所以，透過詢問縮圖的 diagram 算不算真正的 diagram，我們其實是在問：好吧，它是個 diagram，但也許它對縮圖來說是私有的。關於 Q2，我認為維持現有的設定是合理的。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=726s" target="_blank" rel="noopener noreferrer">12:06</a> 但我擔心的是，我們放進縮圖裡的東西其實並不算是一個真正的 diagram。它只是一個單一 snapshot。在我們的模型中，diagram 其實是該 diagram 隨著 clip 演進時不同 snapshot 的集合。然而這個更像是一個 diagram snapshot。如果你不了解這個專案的語言，現在聽起來可能像胡言亂語或行話，但我已經能夠傳達相當豐富的內容，而且模型聽得懂，因為術語檔就在它的 context 裡。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=756s" target="_blank" rel="noopener noreferrer">12:36</a> Q8 聽起來不錯。這三點聽起來都非常有價值。Q9，對，當我們移動臉部時，diagram 應該留在原地不動。Q10，對，重拍時，我們就做去背並替換照片。好，它現在問說是否要先針對幾種不同的編輯介面做原型，這我很喜歡。這正是我想要它做的事。這裡 Q1 棘手的地方在於，這本質上是一個關於感覺的問題。看起來怎麼樣？用起來感覺如何？而且在看到所有差異完整攤在我面前之前，我真的不會知道取捨在哪裡。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=789s" target="_blank" rel="noopener noreferrer">13:09</a> 換句話說，直到我自己親自試過為止。因此，我有一個 prototype skill，它會提供多個選項，讓你能用來做這類決策。這正是 agent 這裡打算要做的事。它應該做哪些版本的原型？Q11。對，對我來說聽起來很棒。有多個原型可以參考的好處在於，特別是如果它做出你不喜歡的東西，那往往比你從喜歡的東西中能學到的還要多。所以實際探索許多不同選項，能讓 agent 對你真正想打造的東西有非常豐富的理解。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=821s" target="_blank" rel="noopener noreferrer">13:41</a> 好了。我們現在有術語表了。CVM（Course Video Manager）的術語表原本沒有縮圖的詞條，現在它提議了兩個。它提議了縮圖（也就是在 YouTube 上為影片顯示的圖片），以及 cutout（也就是把作者的臉去背後疊在 diagram 上）。然後它還說 Q12 應該要有第三個詞：thumbnail diagram。對，聽起來很棒。好，我們送出這個吧。現在我們應該又一步一步越來越接近目標了。很多人問我說，如果 grilling session 跑了大概 500 個問題之類的，那會怎樣？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=859s" target="_blank" rel="noopener noreferrer">14:19</a> 你怎麼知道何時該停止 grilling？你應該……我是說，應該由我來主導這場對話。你懂我的意思嗎？應該是由你來掌控。不是 agent 在 grilling 你。是你正在跟它對話。所以你隨時都可以大方地說：「不用了，我們談得夠多了。我們現在真正去寫點程式碼吧。」好，我們可以看到它更新了術語表裡關於縮圖的章節。這真的很棒。現在它正在做一件很酷的事，就是分派一個子 agent 去製作 thumbnail diagram 的原型。所以這很棒。在它去背景執行一些工作的同時，我們還能繼續 grilling。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=893s" target="_blank" rel="noopener noreferrer">14:53</a> 好的。現在我們要來處理一些硬核的語言問題。縮圖的 drawing 既不是 diagram，也不是 diagram snapshot。你說得對，它不是 diagram，而且 diagram snapshot 也不合適。術語表將 snapshot 定義為拍 clip 當下的複本。所以它現在提出了一個新名詞：thumbnail drawing。屬於單一縮圖、可以就地編輯的 drawing，我們可以從某個 diagram、diagram snapshot，或另一張縮圖的 drawing 開始。它其實是在建議這裡避免使用「thumbnail diagram」。</p>
+<h2 id="sec-6">章節 6：ADR 與資料模型決策（15:19）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=919s" target="_blank" rel="noopener noreferrer">15:19</a> 我對這份術語表蠻熟悉了，對吧？而且我對術語表越熟悉，就越能對這個應用程式做出聰明的貢獻，我也越了解這個應用程式。因此我知道有 preserved snapshot 這個東西，也就是即使沒有任何 clip 使用它，依然保存在該 diagram 時間軸裡的 diagram snapshot。所以我可以對 agent 說：讓縮圖代表一個 preserved snapshot，這不是很合理嗎？我們不一定都把 snapshot 定義為拍攝 clip 的那一刻。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=950s" target="_blank" rel="noopener noreferrer">15:50</a> 我要向大家展示一個我有時會用的技巧，每當我覺得自己來到某件事的關鍵癥結點，或者我只想花一分鐘聊某一件事的時候：也就是我只會說：「我們先專注在這個問題上就好。在我說可以換別的之前，一次只問我一個問題。」這是引導 grilling 的另一種方式。如果你有點思緒發散，如果你只想專注在你真正關心的事情上，而不在乎那些瑣碎小事，那你就可以直接說：「不，現在一次只問一個問題就好。」它在這裡做的另一件事是，它正在閱讀我們之前針對 snapshot 與保留所做的 ADR（架構決策紀錄）。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=982s" target="_blank" rel="noopener noreferrer">16:22</a> 這也是我們在 grilling 期間會做的另一件事。我們可以看一下上方的 ADR3：將 diagram 視為一級實體，並具有每個 clip 的 snapshot。所以這就是我們當初實際針對術語表做出決策的地方。術語表某種程度上描述了應用程式目前的樣貌，程式碼也是如此。但 ADR 的存在是為了解釋我們當初為什麼做出這些決策。換言之，我們正在與應用程式中相對古老、相對成熟的一部分進行互動。如果我們當初沒有把這些寫下來，現在我們就只能用猜的。這就是典型的柴斯特頓的籬笆（Chesterton&#x27;s fence，未搞清楚當初為何設立前不輕易拆除）問題，對吧？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1014s" target="_blank" rel="noopener noreferrer">16:54</a> 在這種情況下存在著某個制度或法律，為了簡單起見，比方說是一道橫跨道路豎立的籬笆或大門。比較現代派的改革者興高采烈地走上前說：「我看不出這有什麼用處。我們把它拆掉吧。」對此，更聰明成熟的改革者最好這樣回答：「如果你看不出它的用處，我絕對不會讓你拆掉它。走開，好好去想清楚。等你回過頭來告訴我你確實理解了它的用處，我也許才會允許你拆除它。」換句話說，在你搞清楚當初為什麼立起籬笆之前，別把籬笆拆掉。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1045s" target="_blank" rel="noopener noreferrer">17:25</a> 所以 ADR，也就是架構決策紀錄，能協助我們追蹤當初立起這些籬笆的原因。所以它回覆了，而且當然，它說：「對，你完全正確。我把它排除掉是錯的。」於是它在問縮圖的 snapshot 屬於哪個 diagram。對，縮圖釘選了某個 diagram head 的 snapshot。問題在於你在縮圖產生器中編輯的是哪個 head。這是個非常棘手的問題，因為我們基本上正在決定這東西到底要如何運作。現在我們在這種模式下基本上可能必須選擇一個 diagram，以便在裡面建立 snapshot，或者我們選擇現有的 snapshot 然後進行編輯。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1081s" target="_blank" rel="noopener noreferrer">18:01</a> 這一切感覺都有點笨拙又古怪。而它某種程度上在建議的是，我們可能需要為每張縮圖建立它專屬的 diagram。這樣一來，當你為縮圖進行簡化時，能確保教學 diagram 的 head 安全無虞，而且你依然能從教學版本開始著手。我在這裡真的不知道。我真的不知道。我打算就把我腦中在想的事情直接說出來。我想……所以我腦子裡在想的是，究竟是要接軌到現有的 diagram 和 diagram snapshot 這套東西，那部分很成熟，裡面有大量程式碼；還是說我們要延伸那套成果，</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1114s" target="_blank" rel="noopener noreferrer">18:34</a> 轉而套用到不同的資料模型上、給它不同的稱呼，這本質上是在決定要不要把兩條線混在一起，還是不要混在一起。我想我最傾向的做法可能是不混在一起，但我害怕的是之後在未來，我們可能會後悔當初沒讓這些模型能以某種方式連結在一起，但我目前看不到有什麼具體的使用情境，需要我們依然抓著現有的模型不放。你看得出我在這裡很糾結，對吧？這確實是個很難思考的問題。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1144s" target="_blank" rel="noopener noreferrer">19:04</a> 如果我有同事的話，這時候我一定會找他們求救說：「救救我。我不太確定這裡該怎麼做。對於這個功能來說，這感覺是個相當重大且影響深遠的決策。」所以它說：「我會順從你的直覺，把它們分開。以後會想把它們連結起來的擔憂，大致上已被兩個事實涵蓋。首先，兩邊儲存的場景格式是相同的。換言之，它們在資料庫裡的儲存方式是一樣的。在兩者之間進行雙向複製是非常簡單的。因此即使模型不合併，從 diagram 或 snapshot 開始也行得通。你之後很可能想要的連結，是 drawing 源自哪裡，而不是合成單一模型。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1175s" target="_blank" rel="noopener noreferrer">19:35</a> 至於哪些縮圖是從哪個 diagram 做出來的，只要在複製時記錄一個 nullable 的 started from snapshot 參照就能解決。」因此我們在這個階段之所以對語言如此執著，是因為語言將會構成往後所有東西依附的資料模型。一旦我們理解了語言，一旦我們弄懂了這些東西的名稱，我們就有了資料庫資料表的名稱。我們就明白它們如何參照系統的其他部分。這樣一來我們就能藉此建立資料表、建立模組並搭建起來。好，我想我決定了，好，這個建議聽起來不錯。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1207s" target="_blank" rel="noopener noreferrer">20:07</a> 我很喜歡我們保有很大的彈性，不需要現在就把資料模型完全定死，而且我也喜歡你的建議，追蹤它是從哪個 snapshot 來的，以防之後變得相關且我們真的想把它們連結起來。我想我們怎麼建模其實不一定有差，只要我們的建模方式不會遺失資訊，並且保留了所有連結即可。我們來看看它對此怎麼說。我給的回應不見得很棒，但也許足夠讓它繼續發揮了。在最理想的狀態下，grilling 真的就像是在跟一位非常受敬重的同事做小鴨除錯（rubber ducking），一個對程式碼庫非常了解的人。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1242s" target="_blank" rel="noopener noreferrer">20:42</a> 而且你某種程度上就是能把你的想法說出來或打出來。透過全盤討論，甚至在寫出任何程式碼之前，你就能得到更具體的解決方案。好，它這裡有點失控了，也就是它竟然自作主張替「thumbnail drawing」寫了一個詞條，這我不喜歡。我不喜歡在這裡引入 drawing 的概念。我們退一步來看。我真的很不喜歡「thumbnail drawing」這個字眼。我非常討厭我們同時有了 drawing 跟 diagram。這兩個詞感覺衝突非常嚴重。我覺得「thumbnail diagram」就很好了。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1273s" target="_blank" rel="noopener noreferrer">21:13</a> 你也能為我說明一下在這裡建立 ADR 的決策過程嗎？你為什麼決定要建立一個新的 ADR？所以，它有點未經詢問就急著建立了一份 ADR，這通常不是我喜歡的作法。我希望這個決策是在 grilling session 期間由我來做出的決定。好，它說……agent 說：「我已經在所有地方都重新命名為 thumbnail diagram，包括術語表、ADR 以及 ADR 的檔名。」是啊，它在這裡有點反過來提醒我，說有個小陷阱要注意。active diagram 是 diagram，但 thumbnail diagram 不是。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1304s" target="_blank" rel="noopener noreferrer">21:44</a> 所以也許這裡用 diagram 這個字不太對。所以現在它在說，為什麼它會建議寫一份 ADR？為什麼它覺得有必要把這個非顯而易見的決策寫下來？所以它說這確實不是顯而易見的，對吧？如果沒有 context，這會讓人感到意外。這裡存在真正的取捨，所以這是另一項標準；而且它很強，也難以逆轉——或者應該說，它寫的是並不難逆轉。我們以後可能還可以撤回。所以現在它把這一點講清楚了。我確實同意它提出建議建立 ADR 的理由。順帶一提，我之所以投入時間做這件事，是為了讓未來的執行過程能理解每個決策的 context，這樣我在繼續開發這個專案時，就能持續獲得更好的 grilling session。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1343s" target="_blank" rel="noopener noreferrer">22:23</a> 少了這個，或者在這裡偷懶，就意味著我下一次執行時效果會差很多，因為我手上沒有足夠好的 context。好，我同意你關於 ADR 的決策，但我也同意 thumbnail diagram 有點尷尬彆扭。</p>
+<h2 id="sec-7">章節 7：用情境測試替名稱把關（22:37）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1358s" target="_blank" rel="noopener noreferrer">22:38</a> 你能給我一些選項，讓我們做些情境測試，看看它們跟 diagram 與 diagram snapshot 相比表現如何嗎？我有點偏向 thumbnail diagram snapshot，雖然這有點長，但或許行得通。情境測試是測試領域語言、測試你想要使用的語言非常棒的一種方式。它的做法是給你一張包含不同選項的表格，各種可以用來描述系統的句子，然後檢視用不同形式的語言來描述時會有多容易。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1389s" target="_blank" rel="noopener noreferrer">23:09</a> 所以這裡我們可以看到候選方案：thumbnail diagram snapshot 對比 thumbnail diagram 對比 thumbnail scene。在第一個情境中寫著：「我從 clip 14 使用的 agent loop snapshot 開始製作縮圖，然後將其簡化。」這三個大概都沒問題。你在 playground 中打開 agent loop。縮圖是在它的時間軸裡嗎？對，這是個有趣的問題，因為如果說它是 snapshot，那你某種程度上會期望它在那裡面，或者說期望它在裡面的某個地方。如果它是 thumbnail diagram，那你可能會想在頂層找到它。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1420s" target="_blank" rel="noopener noreferrer">23:40</a> 所以沒錯，稱它為 diagram 或 diagram snapshot，會讓人感覺它跟其他東西是有連結的。這裡寫著：「我在 diagram snapshot 中拖曳了一個箭頭」，但這不太好，因為 snapshot 是不能變動的。叫 agent 去微調縮圖的 diagram snapshot 其實行不太通，但我開始明白為什麼它會考慮 thumbnail scene，以及為什麼它覺得這樣不錯。我們可以在這裡的所有表格中看到，thumbnail scene 基本上沒問題。除了「Matt 工作時會大聲說出來」這一項以外。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1452s" target="_blank" rel="noopener noreferrer">24:12</a> 換句話說，這是否符合我實際的心智模型？至於 thumbnail diagram snapshot，它有點太長了，有點太囉唆。Thumbnail diagram 看起來還行，因為這是我自然會說出口的詞。而 thumbnail scene 不是我會用的字眼。它比較偏向寫程式用的詞彙。換句話說，scene 並不是我們在整個應用程式中常見的概念。或者可能其實有，也許我們可能有一個像 scene layer 之類的東西。我現在就在術語表裡搜尋一下 scene。沒錯，我們確實有 scene 與 diagram 的概念。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1484s" target="_blank" rel="noopener noreferrer">24:44</a> 我們也有，好吧。那樣也不太好，因為我們在那裡面也有 scene。那我們來讀讀看它最後這部分。對，即使選項 C 拿到了所有的勾選，它其實把第 7 項的權重放得非常高。它寫著：C 在技術上最清楚，但這不是你說話的方式。而且它把程式碼字眼放進了領域語言裡。B 則有一個缺點。它讀起來像是某種 diagram。所以，沒錯，我確實認為它說得對：只要我們有一份 ADR 來說明它是 diagram、但又不是 diagram，thumbnail diagram 就說得通。我也能明白為什麼它也會選 thumbnail drawing。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1517s" target="_blank" rel="noopener noreferrer">25:17</a> 但我就是不喜歡那個詞。感覺念起來不太順口。好吧，thumbnail diagram 是正確的選擇。我同意 thumbnail scene 不好，特別是因為我們在術語表的其他地方確實有 scene 的概念。我也同意有 ADR 在那裡就代表著：沒錯，我們有 diagram 的概念，但我們同時也有 thumbnail diagram。而且我認為保有這個區隔是沒問題的。</p>
+<h2 id="sec-8">章節 8：把剩下的問題一次問完（25:36）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1537s" target="_blank" rel="noopener noreferrer">25:37</a> 現在可以把範圍拉廣一點了嗎？我覺得我們已經掌握了我們要打造的核心關鍵。現在讓我們一次提出多個問題吧。我想這種儀式感對很多人來說感覺很不對勁。很多人會問：你為什麼花這麼多時間去思考語言，以及思考你使用的詞彙？為什麼這對你來說這麼重要？而我認為之所以這麼重要，正是因為你剛才在這裡看到的，也就是我們剛才所做的一切。我們從幾乎一無所有開始。現在，我們對要打造的東西以及即將放入其中的資料模型，有了完全具體化的概念。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1572s" target="_blank" rel="noopener noreferrer">26:12</a> 我們現在知道我們有 thumbnail 和 thumbnail diagram。那個 thumbnail diagram 在技術上來說並不算 diagram。它比較像 scene，但我們不能用 scene 這個字，因為我們在其他地方已經用過了。接著這就會延伸進這場 grilling session 的其餘部分。Q2C 提到從 diagram 的 head 開始。當你從某個 diagram 的 head 開始時，CVM 是否應該將該 head 儲存為未保留的 diagram snapshot？Q2C，這完全正確。「從……開始」會搜尋什麼，以及依何種順序搜尋？我想它有個想法，認為我要一個讓我們從既有 diagram 開始的 UI，但我認為我總是希望從一個空白的 diagram 開始，然後能從那裡搜尋我既有的 diagram。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1607s" target="_blank" rel="noopener noreferrer">26:47</a> 我想針對 Q14，我要的是，我不一定想從一份各種不同 diagram 的「從……開始」清單出發。我想從空白畫布開始，然後也許搜尋既有的 diagram 並把它們放上去。Q15 問：我們是否應該每個縮圖對應一個 thumbnail diagram？沒錯。Q15 是正確的。Q16，thumbnail diagram 中不包含使用者圖片。完全同意 Q16。Q17 問到另一個獨立的概念，叫做 pitch，pitch 包含 YouTube 縮圖說明，以及一個</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1641s" target="_blank" rel="noopener noreferrer">27:21</a> （字幕不清）文字欄位。Q17，我們先別管 pitch 了，它們算是有點被軟性棄用了，我不太常用它們，所以先不用考慮跟它們整合。Q18 沒錯，現有的縮圖就維持原樣。Q19 讓縮圖編輯器具備 在儲存 component、插入 component 方面，讓縮圖編輯器與 diagram 編輯器功能對齊，我們甚至可能想考慮一個共用的 component component。在這裡，我們實際上看到了領域語言中關於 component 有點尷尬的地方。我們可以看到在術語表的 diagram 區塊中，有 component 這個概念。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1674s" target="_blank" rel="noopener noreferrer">27:54</a> 這是我在自己的使用者介面裡相當自豪的一點。我們這裡有 diagram component，它們是可重複使用的 diagram，我可以插入任何我想放的 diagram 中。但在術語表中直接稱它們為 component，意味著它們其實會跟 React 中的 component 概念產生衝突。而這正是我剛才提到的。我們需要有一個顯示 component 清單的共用 component。這樣根本講不通。簡短補充一下術語表中的 component 部分：我覺得裡面用 component 這個字有點尷尬，因為這會和 React 的 component 撞名。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1711s" target="_blank" rel="noopener noreferrer">28:31</a> 所以我想我們可能需要在前面加上 diagram 這個前綴詞。也就是 diagram component。好了，我們現在漸入佳境、進展神速了。我開始對我們要打造的東西有了非常清晰的概念，比起剛開始時清楚太多太多了。我現在還不覺得有必要結束這場 grilling session。我對目前的進度感到相當滿意。這些依然是高品質的問題。好，它現在問我是否想改變搜尋的運作方式。Q20，不，我不同意。我依然希望它在 diagram playground 中的運作方式，跟在縮圖編輯器中的運作方式完全相同。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1745s" target="_blank" rel="noopener noreferrer">29:05</a> 我喜歡 component 有獨立的搜尋，而 diagram 和 diagram snapshot 也有各自的搜尋。如果我們做出兩個有微小差異的 diagram 編輯器，那將會非常非常煩人，使用者（也就是我）隨時都會被這種小毛病煩到。Q21，插入動作會帶入什麼。插入一個 diagram 或 snapshot 是否應該帶入整張繪圖？Q21，是的。貼上動作也算是一種來源。所以它的意思是，如果我們複製了一個 diagram 然後貼上進來，我們是否該追蹤它來自哪個 snapshot？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1776s" target="_blank" rel="noopener noreferrer">29:36</a> Q22，這聽起來複雜度很高，而這個功能我可能不會那麼常用。所以，不，我覺得我不在乎這個。單一 diagram component 庫，單一 UI。從縮圖中儲存的 diagram component 是否應該顯示在 playground 中，反之亦然？Q23，是的，絕對要。接下來，刪除目前被當作來源的東西。刪除影片會串聯並硬刪除它的縮圖。如果下週的 thumbnail diagram 從這週複製了形狀，刪除這週的就會破壞那個連結，這違反了「不遺失資訊」的規則。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1806s" target="_blank" rel="noopener noreferrer">30:06</a> Q24，是的，縮圖應該被封存而不是被刪除。我們有點希望軟刪除成為所有東西的通則。對於還不了解的人來說，軟刪除不是從資料庫中將東西刪除（那是硬刪除），而是用一個小標記來標示它，例如 archive true 之類的，然後它就不會出現在 UI 上，或者你把應用程式寫成不顯示它。軟刪除極度好用，因為這意味著如果你想的話，你可以回頭把那些資料撈回來。但如果你硬刪除，那就有點慘了，因為它真的就沒了。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1838s" target="_blank" rel="noopener noreferrer">30:38</a> 它已經從系統中消失了。因為這些資料對我來說非常寶貴，所以我幾乎總是選擇軟刪除。而且我想我沒有任何清理機制來清理舊資料。我就是把資料一直留著。但在一個有很多使用者的應用程式中，我就會想確保最終，比方說以 30 天為週期之類的，去刪除大家已經軟刪除的東西。好，它問到是否應該透過把 playground 的編輯器抽出來，變成一個共用的 diagram 編輯器 component 來達到對齊。Q25，對，完全沒錯。讓我們為此維持單一真實來源。Q26，它說你搜尋 diagram 或 snapshot、或把它放進去的步驟目前還不存在。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1871s" target="_blank" rel="noopener noreferrer">31:11</a> 這對我來說感覺其實不是真的。它實際上沒有注意到程式碼中的某些東西，這讓人有點惱火。Q26，我覺得那不是真的。我們不是已經有一個類似尋找 diagram 的功能了嗎，對吧？那我們直接重複使用那個就好了，不是嗎？Q27，縮圖編輯器中的導覽結果。Q27，是的，我同意。看起來很棒。Q28，全面實施軟刪除是一項獨立的工作。它現在順著我的想法繼續延伸推演。但我相當確定我們到處都已經有軟刪除了。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1903s" target="_blank" rel="noopener noreferrer">31:43</a> Q28，對，我們別把 scope 做得太大。我相當確定在大部分我想要的地方，我們都已經有軟刪除了。這也是 grilling 非常重要的一部分，就像當你在討論你的系統時，你常常會發現一些改進它的小方法，這些方法可能會轉化為你在 backlog 上建立的 issue，之後你可能會拿來 grill，或者可能直接快速做掉。因此 grilling 不僅僅關乎你正在處理的功能，也關乎與程式碼保持接觸。這是一種儀式，一套用來思考程式碼的慣例。這就是為什麼我花這麼多時間在上面的原因。Q26。好，我們在現有的搜尋中新增一個動作。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1936s" target="_blank" rel="noopener noreferrer">32:16</a> 聽起來很棒。好，它現在說這個問題問得很好。所以，過去的 thumbnail diagram 是否應該出現在同一個搜尋中？這其實是個蠻不錯的想法，因為我們可能確實想要能夠搜尋以前做過的縮圖，畢竟它們在 diagram 裡可能用得上，就像 diagram 對縮圖也很有用一樣。這再次證明，這完全就是 grilling 真正非常擅長梳理整合出來的那類事情。Q29。是的，這真的是個很聰明的點子。你應該要能夠從 diagram playground 搜尋縮圖或 thumbnail diagram。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1970s" target="_blank" rel="noopener noreferrer">32:50</a> 而且你應該要能從縮圖編輯器中搜尋 diagram 和 diagram snapshot。所以這是我們在資料模型中需要思考的重要事情，我們之前其實沒有很重視這點，但我認為我們目前的模型可以做到，因為 thumbnail diagram 大概會儲存在一個獨立的資料庫資料表中，或者它們可能只是現有縮圖上的一筆記錄。</p>
+<h2 id="sec-9">章節 9：看原型的幾個版本（33:13）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=1993s" target="_blank" rel="noopener noreferrer">33:13</a> 所以，沒錯，這蠻有意思的。好，在我們說話的同時，原型已經建置好了。那我們就來看看吧。好，來了。感覺蠻超現實的。編輯一張我自己臉的縮圖，感覺相當超現實。這非常酷。這跟我原本想像的蠻接近的。在這裡，我們可以把我的臉往左往右移動。移動有點太快了，但我是說，這個做得不錯。然後在左上角，你實際上可以看到合成照片的預覽。很棒。而這還只是版本 A，對吧？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2025s" target="_blank" rel="noopener noreferrer">33:45</a> 我們還有另外幾個版本。所以，我們現在有了把臉放在畫布內的版本。哇。這同樣感覺蠻迷幻的。這其實比我想像的還要糟糕。尺寸有點太大了。我真的很討厭左邊這個帶有檢視畫面的列。這個臉的東西又一次實在太……（字幕不清）。好。B 真的沒有我想像的那麼好。然後這個是什麼？這是一個分割檢視。好，分割檢視根本是垃圾，因為我得看一下左邊這裡，然後看它在右邊更新。你可以看到我到處移動藍色方框，然後我得手動用手指對齊，但我看不到我的手指。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2061s" target="_blank" rel="noopener noreferrer">34:21</a> 這很糟糕。所以，我想我們在這裡比較想選的是 A。噢，看看這個功能。看，它有一個 ghost face，當指標在框內時。這裡 ghost 是當動詞用。所以，看，當指標在畫面框內時，我的手就消失了。這太詭異了。那邊顯示「取得正式環境授權」（get license for production）很討厭，因為我其實有授權。所以那邊出了點問題。所以我要用語音口述出我喜歡和討厭的所有地方。然後我們要和 agent 一起進行迭代。我真的很喜歡 A，我覺得你在那裡確實抓到了某個東西。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2093s" target="_blank" rel="noopener noreferrer">34:53</a> 我特別喜歡 ghost face 那個功能。這是個很棒的功能。把我左右移動、也就是把臉左右移動有點太靈敏了。所以只要稍微調低一點就好。在合成的 diagram 中，似乎有一條細白線剛好在……的左側 抱歉，是在那邊主要區塊的外側，這不太好。我也希望合成圖能顯示在縮圖編輯器下方。我們也缺少很多我們在 grilling 時討論過的東西，像是能夠插入 component 以及能夠把東西放進去。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2128s" target="_blank" rel="noopener noreferrer">35:28</a> 而且我很確定我們目前還沒有達到跟另一個……跟 diagram playground 一樣的水準，對吧？所以我們大概需要一個像那樣的版本。所以我們現在放棄這三個版本吧。我們就採用 A，並且繼續針對它進行迭代。在我試用之後，它也提了幾個問題給我。所以它在問要在哪個介面。我想我們在 Q31 中已經加入了這個。對，我希望它放在縮圖頁面裡面。而且我認為我們可能需要在下一個原型中看到它，這樣我們才能妥善地在頁面上編排它。移動臉部和重新拍攝是否應該和繪圖在同一個復原紀錄中？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2161s" target="_blank" rel="noopener noreferrer">36:01</a> 噢對，Q32。這太天才了。真的非常非常聰明。絕對要。這真的很酷，因為我目前的縮圖編輯器裡沒有復原紀錄。所以在這方面我有點麻煩。但我們基本上能直接免費獲得這個功能，因為我使用的工具 tldraw 已經把它內建在資料模型中了。非常、非常、非常聰明。好。所以它現在回頭把任務傳給原型 agent，說：「好，捨棄 B 和 C。把 A 放進真正的縮圖頁面等等之類的。」換句話說，它正在跟我確認我給它的所有回饋意見，而且現在正在把這些全部實作出來。這個原型打造階段非常非常重要，因為在我們實際排程 agent 來建置之前，我們能確實確立我們認為產品應該長什麼樣子。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2201s" target="_blank" rel="noopener noreferrer">36:41</a> 換句話說，這段人類在迴圈中與 agent 協作的時間至關重要，因為我們將大大縮小 agent 的決策空間。我們會說不，它外觀必須完全長這樣。我們完全清楚資料模型。一旦我們讓它 AFK（人不在電腦前、讓 agent 自己跑），agent 接下來唯一要做的事就是把這兩樣東西串接在一起。當我看到原型、看到東西開始栩栩如生時，我覺得真的很難不感到興奮。你知道的，我們進行了這個 grilling，有時感覺有點繁重、有點煩人，但當你實際看到東西成形時，你就會看到用起來會是什麼感覺。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2233s" target="_blank" rel="noopener noreferrer">37:13</a> 而且我真的在做這件事。對我來說這是個人軟體。你知道，這只是為了讓我的生活更愉快的一種東西。看到它實際成形真是太令人興奮了。</p>
+<h2 id="sec-10">章節 10：原型再迭代與那條白邊（37:21）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2243s" target="_blank" rel="noopener noreferrer">37:23</a> 好，我們回來了，縮圖編輯器裡現在有了一個新版本。所以，我們在底部有了 YouTube 預覽。這很棒。臉部在這裡入鏡了。我其實很喜歡可以調整這個大小。這是我以前從來沒有過的。我們來把我稍微換個位置。這真的很順暢。沒錯，這真的超級棒。現在也能叫出 command palette，所以我可以插入 component。我們來看看這裡的 list item。是的，看起來棒極了。我應該要能夠搜尋其他 diagram。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2275s" target="_blank" rel="noopener noreferrer">37:55</a> 所以，我可以插入一張 diagram。那我們就在這裡選 wayfinder 吧。然後，你看！我們連那些功能也全都正常運作了。那我們來看看合成圖。我們可以看到，啊，那邊看起來還是有一小塊白色。把我稍微往這邊移一點。把這個移一下，讓它蓋滿整個畫面。對，確實蓋住了。這真的很酷。噢，我太喜歡了。我仍然可以看到匯出圖右邊那條小白條，但整體來說看起來好很多了。它在這裡也問了我一些問題。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2305s" target="_blank" rel="noopener noreferrer">38:25</a> Q34，我同意。Q35，我同意。這張臉屬於誰？（字幕不清）很好。Q36，我同意。Q37，我同意。Q38，我同意。所以，到了這個階段，agent 基本上已經跟我們的想法一致了。我們現在在原型中大概只剩下一個問題要解決，而且我感覺得出我們差不多快結束 grilling session 了。就像當我開始一路說對、對、對的時候，就代表我們已經一致了，對吧？agent 正在替我做出決策，就好像它就是我一樣，而且它是在理解我在意什麼的情況下做決策的。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2339s" target="_blank" rel="noopener noreferrer">38:59</a> 所以這個小白條的事情，其實在這裡展現出了蠻棒的一面。這本質上是原型中的一個 bug，如果我們沒有發現它，它本來可能會進入正式環境，但我們發現了。所以它在這裡嘗試要做的是，它正在試著驗證自己的發現。它正試圖圍繞這個問題建構一個 harness。換句話說，就是一個能重現問題的方法，然後不管問題是什麼，它都會試著去修復它。換句話說，它會先在自己的瀏覽器中重現那個白條，然後讀取匯出圖以及各個預覽圖右側邊緣的像素顏色。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2371s" target="_blank" rel="noopener noreferrer">39:31</a> 那樣應該就能告訴我們白色是從哪裡來的。這一代的 agent 似乎非常、非常擅長這件事。換句話說，就是非常紮實地驗證自己的工作成果。我的 home repo 裡可能有像 steering files 這類的東西指示它這麼做，但我不太確定。我認為它純粹是自動自發這樣做的。我們也可以看到它開啟了現有的子 agent。也就是目前用了 260k token 的這一個。所以，這已經相當深入它的 dumb zone（笨區）了。我可能原本更希望它專門針對這個問題啟動一個新的子 agent。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2404s" target="_blank" rel="noopener noreferrer">40:04</a> 我認為那樣大概會更好，但我的意思是，我們就看看它的表現，看看它是否能找到解決方案。如果它沒能找到解決方案，那麼我會用一個擁有乾淨 context 的新子 agent 再次嘗試。</p>
+<h2 id="sec-11">章節 11：smart zone 與 dumb zone（40:15）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2417s" target="_blank" rel="noopener noreferrer">40:17</a> 順帶一提，大家總是問我：噢，你現在還堅持 smart zone（聰明區）／dumb zone 那一套說法嗎？你知道的，這是我的主張，其他人以前也有過這樣的主張。這不是我原創的。是 HumanLayer（現在在 Factory）的 Dex Horthy 提出來的，也就是當你的 agent 達到大約 150k token 時，它的表現就會開始變得稍微蠢一點，並且開始慢慢變得愈來愈笨。如果你想想 smart zone 對比 dumb zone 的真正意涵，我們在那裡討論的其實是：當你在 context window 中加入愈多 token，幻覺的風險就會慢慢升高。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2451s" target="_blank" rel="noopener noreferrer">40:51</a> 這是因為如果你把這些方塊想像成一個個獨立的 token，那麼模型就需要追蹤每個 token 之間的所有關係。而且重點不是 token 的數量增加。而是模型需要追蹤的關係數量以平方的速度增加，最後就需要龐大的記憶體，以及龐大的工作量，才能在雜訊中聽出訊號。不過，讓模型在這方面表現得更好，本質上是一個工程問題，對吧？某種模型設計上的問題，我相信大家正在想辦法解決。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2485s" target="_blank" rel="noopener noreferrer">41:25</a> 而大家總是問我的問題就是：dumb zone 是從多少開始？我什麼時候該清除 context？而我的回答漸漸變成：好，在前幾代的模型，確實如此。好，你差不多得在 120k 就清除 context，像 Sonnet 3.5 之類的，有時甚至大約 80k token 就得清，你知道的，token 之間的關係數量會失控，最後會出現大量大量的事實性錯誤。但現在它真的更像是一種成本與最佳化的問題。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2515s" target="_blank" rel="noopener noreferrer">41:55</a> 你知道這裡的 token 越少時，你的 agent 就會越聰明。所以這不一定是關乎幻覺的風險。更像是在最佳化你的 agent，好讓它產出最好的成果。所以對我來說，比較不是 agent 在 dumb zone 會產生幻覺。比較像是它產出的成果就是比較差，而我在 smart zone 工作時，得到的結果比較好。而且在你的 context window 達到大約 750k token 的狀態下運作非常非常昂貴，因為就算是 當你的快取失效時，所有先前的 token 都必須再跑一次，那樣又會再計費一次。</p>
+<h2 id="sec-12">章節 12：寫 spec 與 ticket（42:28）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2550s" target="_blank" rel="noopener noreferrer">42:30</a> 好，原型的下一個版本準備好了，雖然裡面還是有那一小條白色的東西，但它其實說這不是問題。那條小白條其實是來自 Windows 在 125% 縮放下的瀏覽器。Chrome 把 120 寬度的圖片縮小到預覽畫面中。導致最後一欄像素只有部分被繪製。這裡還有一些其他東西，像是一些風險點。我同意 Q39。Q40。對，編輯繪圖時應該要自動儲存縮圖。它現在問我想不想把它寫出來。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2580s" target="_blank" rel="noopener noreferrer">43:00</a> 所以，我這裡要小心一點。我要回到這個文字輸入框的最開頭。然後我要說 to-spec，我們來把它寫出來。我必須回到最開頭，因為 to-spec 是一個由使用者叫用的 skill。所以實質上我可以叫用它，而且我在使用 Claude Code 時必須把它放在最開頭。我不能隨意把它散落在文字輸入框的中間，這有點煩人，也是我一直希望他們改掉的地方。to-spec 將要做的是建立一份規格說明（spec）。它會問我幾個關於我們要在哪裡測試的問題，接著我們就能從那裡開始實作它。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2618s" target="_blank" rel="noopener noreferrer">43:38</a> 我已經有一些相當穩固的 reducer，而 reducer 本質上就是前端裡可以把很多狀態集中在一起管理的地方，我覺得它們搭配 agent 非常非常適合，因為 agent 只要直接擴充現有的就行了。這三個場景看起來都不錯。接著我也要使用 to-tickets 這個 skill。我也想請你加上一些 ticket。我們就批次一次處理完這些吧。現在，to-spec 和 to-tickets 做的事，本質上就是給 agent 執行長時間 session 所需的一切。spec 就像是一份目的地文件。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2650s" target="_blank" rel="noopener noreferrer">44:10</a> 所以，我們實質上是跨多個 session 來執行工作。而 spec 會說明：好，一旦我們完成了這些 session，這就是我們最終要達到的目標。然後 ticket 本質上就是用來界定每個獨立 session 的工作範圍。所以我們要執行的每個子 agent 都會拿到一張 ticket，那就會是它那部分工作的範圍。所以這裡它給了我們所有 session 的建議拆解分工。第一個就像是事前重構，比如把共用的 diagram 編輯器抽成共用 component。非常有用。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2680s" target="_blank" rel="noopener noreferrer">44:40</a> 這在之後會非常方便。每張 ticket 都寫明了它被什麼卡住。我也不打算太仔細審查這個。9 張對我來說看起來沒問題。我就直接說：沒錯，我覺得看起來很好。現在，計畫是一旦完成這個，我接著就要 compact（壓縮）。所以，我打算把整個 session，也就是我們剛做完的 grilling session 壓縮下來，然後我們要執行一個叫做 implement-spec 的 skill，它基本上就會在 AFK 的狀態下建立這所有東西，並合併成單一 PR。你想想看這項工作對 agent 來說會有多輕鬆，對吧？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2712s" target="_blank" rel="noopener noreferrer">45:12</a> 到那時候我們就會有一份更新過的術語表。我們會有要它建置的東西的完整 spec、所有的 ticket，以及要怎麼達成的做法，而且我們還有一個原型，在 UI 方面它基本上照抄就行了。所以，我們也已經寫好了一堆程式碼。當我進行到 spec 和 ticket、進行到實作階段時，我真的是儘量不給 agent 任何決策空間去運作。沒有任何它可以說「喔，好，我就隨便調整一下這個」的模糊空間。因為你給 agent 越多的模糊彈性，它的表現就會越差，因為只要你要求 agent 做決定，它就可能做出糟糕的決定。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2748s" target="_blank" rel="noopener noreferrer">45:48</a> 所以，你給它的決策越多、它的決策空間越大，它選到糟糕決定的機率就越高。因此在談到實作、談到我想要的功能決策時，我往往偏好給 agent 非常非常少的選項。好，我們現在有了 spec，而且可以看到這是在 GitHub 上。所以這是一個 GitHub issue。我這裡有一堆 user story，大約有 47 個。一堆實作決策，這是一份非常非常豐富的文件，包含了範圍之外的內容。我們可以看到它也引用了本機分支上的原型。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2780s" target="_blank" rel="noopener noreferrer">46:20</a> 太棒了。接著它有一堆 sub-issue，每一個都是個別的 ticket。所以這些都是個別的任務，關鍵是這些是可以平行處理的。</p>
+<h2 id="sec-13">章節 13：compact 與 AFK 實作（46:28）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2789s" target="_blank" rel="noopener noreferrer">46:29</a> 所以我要做的是 compact 目前的對話。換句話說，就是把我們目前為止所有的 context 全部壓扁濃縮。然後我要下達 implement-spec，基本上就針對它剛建立好的 spec 來執行。我已經開始更頻繁地使用 compact 了。實際上 compact 變得可靠得多，也更好用了。我依然不認為它是個完美的東西。像是 auto-compact 仍然有點不可靠。因為那個時機點有時候真的會狠狠坑你一把。某些重要的東西會被移出 context 外。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2821s" target="_blank" rel="noopener noreferrer">47:01</a> 但 compact，特別是在這種我們已經把對話轉化成文件的情況下，非常非常安全。成本幾乎是零。它只花大約一分鐘壓縮這段對話，接著蹦一聲，我們就實質上回到了起始的 context 大小。現在，implement-spec 是我已經擁有一陣子的 skill 了。我想它是在 v1.3 推出的。這真的就是把 spec 和 ticket 拿過來，在我們的本機環境中加以實作。當它完成時——對於這樣的一項工作可能需要大約一小時或 45 分鐘——</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2853s" target="_blank" rel="noopener noreferrer">47:33</a> 我們就會得到一個漂亮的 PR，基本上實作了整個功能，且隨時可以合併。所以，這就是我會離開電腦前、信任它讓它 AFK 自行運作的時刻。它會盡可能以最大程度平行執行。你可以看到它正在啟動現在可以開始的三張 ticket。而且它能夠傳遞非常豐富的 context 給它們，說明需要做什麼，因為那只是我們原本對話的壓縮版本。所以，它確切知道程式碼庫中哪些部分重要，知道 spec，也知道原型。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2884s" target="_blank" rel="noopener noreferrer">48:04</a> 所以，我要走開了，等我回來時，我應該就會有可以運作的程式碼。好，過了一會兒。我們現在有一個龐大的 PR，而且跑了一次 code review 並發現了一些違規項。我們可以在這裡的 PR 列表中看到名為「在臉旁就地編輯 thumbnail diagram」的 pull request。我們可以看到我們新增了 21,000 行程式碼。天啊。我真期待審查那些程式碼。而 implement-spec 的運作方式是：它會用 agent 去審查所有內容，然後對照一些既有的程式碼規範進行檢查。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2914s" target="_blank" rel="noopener noreferrer">48:34</a> 如果你想了解更多，應該去看看 code-review 這個 skill。但基本上，它發現了一個硬性違規和幾個範疇蔓延（scope creep）的情況，接著它正在把這些修復好。</p>
+<h2 id="sec-14">章節 14：把大 PR 拆成堆疊式 diff（48:43）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2924s" target="_blank" rel="noopener noreferrer">48:44</a> 現在，我要在這裡嘗試一些我通常不會做的事，也就是我想在大家看著的情況下來審查這個。因此，我想嘗試另一種把這個龐大 PR 拆解成更小區塊的方法。我目前還沒有專門處理這個的 skill。這不是我經常做的事，但對於像這樣我想好好審查的大量工作來說，這樣做很合理。一旦 review 完成，我想請你用堆疊式 diff（stacked diffs）將它拆成更小的區塊。這些較小的區塊理想上應該要能各自獨立審查。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2956s" target="_blank" rel="noopener noreferrer">49:16</a> 而這意味著我希望它們各自都是一連串雙向門（合併後可退回），並以最後一道單向門（難以退回）作結。你可以在 PR skill 裡面找到雙向門和單向門的定義。單向門和雙向門是個非常好的比喻。它基本上代表當你有一個屬於雙向門的 PR 時，意味著你可以合併它，然後隨時可以 revert（還原）。所以你可以穿過那扇門，然後再走回門的另一邊。而單向門則是合併後就非常難以還原的 PR。換句話說，它可能會搞亂某些資料。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=2987s" target="_blank" rel="noopener noreferrer">49:47</a> 它可能會與外部服務通訊。它可能會暴露出難以收回的安全缺口。而且 agent 相當擅長把龐大的 PR 拆成小型 PR。所以它在這裡給了我這一組拆分出來的不同 PR。不過我看得出其中有些 PR 比其他的小。感覺最後這一個算是比較大的那一個。你能估算一下每個 PR 裡大約會有多少行程式碼嗎？因為我在這裡真正想做的就是這件事。我也在想，我們是否能利用 feature flag 讓 thumbnail diagram 可以使用，之後再把它收回。在這種情況下，我有點像是在角色扮演，假裝這是一個正式環境的系統。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3020s" target="_blank" rel="noopener noreferrer">50:20</a> 你知道的，我有點像是假裝：好，我想把這個龐大的 PR 拆成可審查、可以發布到正式環境的小區塊，而不是在合併單一 PR 時承擔巨大的風險。通常當我合併到這個 repo 時，因為只是個人軟體，我不需要那麼在乎，直接啪一聲塞進去就好。但如果我設想自己有成千上萬、甚至數十萬名使用者，我們真的會想確保正式環境盡可能貼近這個變更。然後一旦我們最後撥下開關啟用它時，應該會相對無縫。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3052s" target="_blank" rel="noopener noreferrer">50:52</a> 換句話說，我們把這一大塊，或者說把這扇單一門變成許多門，讓我們可以視需要隨時還原。最後，我們再在收尾時把它開啟。好。所以現在它把最後那個龐大的 PR 拆成了四個較小的 PR。結果是，它基本上會讓兩種實作並行跑一陣子，然後當我們準備好時，就合併最後一個 PR，那會把 flag 開啟。好，我們就採用這個版本。我覺得聽起來不錯，但只在 review 最終把它的問題修好之後再做。請確保你把這項工作委派給子 agent，因為你在 context window 方面有點受限。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3087s" target="_blank" rel="noopener noreferrer">51:27</a> 所以，這令人興奮。這算是一種實驗。希望這些個別合併起來會很輕鬆。</p>
+<h2 id="sec-15">章節 15：人工審 PR 堆疊（51:30）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3091s" target="_blank" rel="noopener noreferrer">51:31</a> 好，我們這裡有了七個 PR 中的第一個。第一個照字面上就只是術語表詞條、diagram component 和 ADR060。如果我們再仔細看一下，這些看起來都沒問題。所以就照這樣，這個可以直接合併進去。我很樂意在這裡啟用 auto-merge（自動合併）。我可以點擊確認 auto-merge。一旦 CI 檢查通過，它現在就會合併進去。好，搞定。它已經進去並合併了。太棒了。接下來我們有一個新的 PR 進來，寫著「從 editor 或 diagram playground 抽出共用的 diagram 編輯器」。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3123s" target="_blank" rel="noopener noreferrer">52:03</a> 所以這裡只變更了幾個檔案。既然我們都到了這一步，不妨聊一下人工審查，以及做這件事的目的到底是什麼。對於我目前的狀況，我會做這次的人工審查是因為我知道各位在看，而且大家對我怎麼做人工審查很有興趣，所以我會逐行審查每一行。但我是不是在說你也需要自己逐行處理或逐行審查每一行？不，我覺得不需要。當我像這樣審查程式碼時，顯然我想要確保它是可以正常運作的。所以如果這要部署到正式環境，我就會在本機 clone 下來，或者弄個 playground 之類的地方去跑一遍，檢查它是否能正常運作。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3159s" target="_blank" rel="noopener noreferrer">52:39</a> 我實際上要做的是，我會把所有東西都合併，然後因為我是唯一的使用者，我打算最後再來檢查它。但在此檢查程式碼的重點在於，我不只關心程式碼做了什麼。我也很關心產出這段程式碼的系統。換句話說，如果我注意到這段程式碼裡面有什麼地方出錯，或者有我不喜歡的 pattern，那我想做的就是建立一個 lint rule 之類的東西，確保它不會再次發生。而我所謂的不喜歡，意思是我想要對我想改變的事情提出一個假說，認為它正以負面的方式影響我 agent 運作的環境。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3200s" target="_blank" rel="noopener noreferrer">53:20</a> 換句話說，我可以在這裡的這個檔案中看到，像是 command palette，我可以看到旁邊有一大串註解寫著「在 active diagrams，或者說是 shared diagram editor 的畫布上方掛載 Command+K command palette」。我對這些龐大的註解感到有點不滿意，而且它們在我的程式碼庫裡到處都是，因為這讓 agent 需要更新的面積變大了。所以我要在這裡新增一則 review comment。我要寫說我其實不太喜歡這些註解，因為它們留下了巨大的表面讓 agent 需要更新，而且除了程式碼本身已經解釋清楚的內容之外，它們並沒有增加太多價值。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3232s" target="_blank" rel="noopener noreferrer">53:52</a> 我想請你在 coding standards 裡加點東西，讓這類註解大幅減少。而且我認為我們應該討論一下，也許在程式碼庫的某些部分禁止使用註解。所以我會在這裡留 review comment，之後再讓各位看我會怎麼處理這些 review comment。舉例來說，在這邊我真的很不喜歡 TypeScript 裡的 as 關鍵字。它可以用來欺騙 TypeScript，這是我非常討厭的。所以我想說這裡需要一個 helper function，用來禁止所有不在 shared utilities 裡面的 as 用法。這只是因為我知道，畢竟我想我算是個前 TypeScript 專家。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3264s" target="_blank" rel="noopener noreferrer">54:24</a> 基本上我做過一套 TypeScript 課程。同樣地，這裡的這些 docs 感覺也相當棘手。我不喜歡這個。你可以看到當我們檢視 diff 時，裡面到底有多少比例完全就只是程式碼註解。這真的很誇張。不過整體來說這次審查沒花太多時間，而且我注意到了幾點我們可能需要改進的地方。接著我們看清單中的下一個 PR，這只是一個相對較小的變更。同樣地，我們有一些 reducer 的測試工具，這我非常非常喜歡。如果你以前從未用過 reducer，它真的很棒、非常好用。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3294s" target="_blank" rel="noopener noreferrer">54:54</a> 又是更多我只想除掉的註解。天啊，這個 repo 滿滿都是註解。還有另一個我真的很不喜歡的 TypeScript 寫法，就是在這邊用了 Pick 和這個 &amp;。優先使用 interface extends，而不是交集型別（intersection）。看看你能不能為此找到一條可以讓我們棘輪式收緊（先不強制、逐步提高標準）的 lint rule——順帶一提，注意這個措辭，像是「lint rule」。這是要求它找到一條確定性的規則，我們不一定要在第一天就強制執行，但會隨著時間逐步棘輪式收緊標準。同樣地，這裡有好多註解要審查。我不得不說，這真的讓人覺得相當反感了。另外這裡還有一點是，即使在 PR 實際上沒動到的程式碼中，我也注意到它呼叫了 fetch 卻忽略了結果。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3328s" target="_blank" rel="noopener noreferrer">55:28</a> 我覺得這裡似乎需要一個可重複使用的函式。我在這些審查中滿嚴格的，對吧？我試圖逼它設計出能消除所有細微模糊處、替 agent 省去所有決策的 API。另一個是，我看到我們有一個 useSearchParams hook，而且在這邊是用魔術字串（magic strings）來抓取資料。要改掉這個 highlight 或甚至這個 snapshot 的名稱實在太容易了，而且我們完全不會收到任何型別錯誤。找出一種更型別安全（type-safe）的設計來存取 search parameters，因為這感覺像是個魔術字串風格的坑，我們很可能會掉進去。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3363s" target="_blank" rel="noopener noreferrer">56:03</a> 建立一個禁止使用 useSearchParams 的新 lint rule。然後我們再來制定一個逐步棘輪式收緊的策略。同樣地，我在這裡野心非常大。我是在說，好，我們在這裡找到的所有東西，我永遠、永遠不想再看到。永遠、永遠不想……就像我想用 lint 把它徹底消滅一樣。這就是我的計畫。下一個 PR。同樣地，我們在這裡已經累積到 500 行了。不得不說，除了這裡的註解之外，這是一個非常乾淨的 PR。我們可以看到它拿掉了一堆魔術條件式，改用單一真實來源（single source of truth）的 isDiagramSearch。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3395s" target="_blank" rel="noopener noreferrer">56:35</a> 太精彩了。同樣地，這裡的註解實在太多了。太多註解了。好，我想我現在進入倒數第二個，或者可能是倒數第三個了。看看。對，我想這個仍然是雙向門的情況。而現在我們已經累積到大約 2,500 行了。現在我想各位已經理解我在這裡審查的重點了，也就是我單純看著程式碼，試著提出我的看法、給出我的感受。我認為 code review 是做這件事的好管道。但我不會把這些當中的任何一項視為 blocking（阻擋合併）。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3426s" target="_blank" rel="noopener noreferrer">57:06</a> 事實上，在所有這些 PR 當中，我唯一認為必須強制審查的就是這一個。這是針對 thumbnail diagram 概念所做的只新增欄位的 migration。而我想看的就在這裡的 schema.ts 裡面。這把 thumbnail diagram 加進這裡的縮圖（thumbnails）中。各位，這裡真是有夠多註解。註解同時也是讓 agent 寫下特定於它當前 session 的文字的機會。換句話說，這段文字基本上就只是它寫給自己未來 session 的筆記，</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3461s" target="_blank" rel="noopener noreferrer">57:41</a> 這真的很令人沮喪，因為那則註解就會永遠留在那裡，而且完全毫無用處。整體來說，這看起來非常扎實。所以實際上，我對這個大 PR 裡單向門的部分感到滿意。</p>
+<h2 id="sec-16">章節 16：合併與 retro（57:50）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3472s" target="_blank" rel="noopener noreferrer">57:52</a> 所以我現在要做的是回到我的 agent session。我要執行 compact。然後我要說：請依照順序把所有這些 PR 合併好嗎？先忽略所有的 review comment。我們待會再來處理那些。其實，在所有東西都合併好之後，你可以把合併放在背景的子 agent 裡執行嗎？這樣我們就可以繼續聊。好，我們把這個送出去。所以既然我們決定要進行合併了，我假設在各位的版本裡，你會真的把它 clone 到本機，或者你會去確認最終 branch 上一切都能正常運作。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3502s" target="_blank" rel="noopener noreferrer">58:22</a> 我稍後再來檢查也沒問題。但我現在要做的是，利用這個 session 來修復、或擬定計畫去修復我在審查期間發現的所有問題。為此我會使用 retro skill。我會說：你能不能看一下這次執行的所有 agent session？而且你能不能也把我的 review comment 抓進來？而 retro skill 基本上就是對我們剛才看到的過程進行回顧（retrospective）。即使我們已經執行了 compact，它仍然可以存取之前執行的所有 session，因為它們就只是存放在本機硬碟上。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3534s" target="_blank" rel="noopener noreferrer">58:54</a> 而且它會使用 GitHub CLI 把我的所有 review comment 抓進來。所以它也能存取那些內容。通常在完成這樣一大段工作之後我都會跑 retro，或者我也會定期跑它，單純檢查一下我的 agent session。如果你有某種能將此自動化的軟體工廠架構，那我會把你的 agent session 存放在雲端某處，然後 retro 就可以檢視這些內容，看看 agent 在哪些地方遇到困難。所以它現在正在派出 agent 去梳理 30 幾個 session 的逐字紀錄和你的 12 則 review comment，然後會回傳一份排序清單。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3565s" target="_blank" rel="noopener noreferrer">59:25</a> 所以我們基本上是投入大量的 token，為我們 agent 運作的環境尋求改進或潛在的改進方向。剛才在執行時，我們完全沒有去理會那些 implementer。我沒有去看子 agent 的 trace。完全沒看。這是我們的機會，花一些 token 在這上面並實際檢視它們，從中獲得一些改進。好，來了。我們收到 retro 的結果了。所以我所有的 12 則 review comment 都有同一個根本原因。CVM 的書面標準中，沒有任何一條涵蓋你提的這幾點。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3596s" target="_blank" rel="noopener noreferrer">59:56</a> docs 與 model 裡現有的程式碼做的是相反的事。所以 coding standards 檔和 docs 的 frontend state 裡現有的內容，呈現的都是你否決的 pattern，而且 main 上已經有數千個實例了。數千個實例，天啊。好吧，看來我顯然是在試圖讓一艘巨大油輪掉頭。而且 prototype 的 branch 被直接複製過去了。好，所以它的第一項建議是把你的 review comment 轉成棘輪式收緊的檢查。第一個是 as 用在 shared utilities 之外的情況。很好，太棒了，聽起來不錯。看，它會抓到 2,000 個實例。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3628s" target="_blank" rel="noopener noreferrer">60:28</a> 好，（字幕不清）交集型別改用 interface extends。oxlint 沒有這方面的規則，但可以用一個小型 parser。所以基本上它是在說為這條規則建立自訂的 lint rule。太好了。接下來，我說過我們應該幹掉 useEffect。幹得好。我們針對特定目錄停用它。也就是 hooks。目前在 140 個檔案中大約有 230 個 useEffect。接下來是 useSearchParams 和魔術字串。所以這會導向一個新的具型別 search params helper。太棒了。我們禁止原始的 fetch，改用具型別的 API client 模組。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3662s" target="_blank" rel="noopener noreferrer">61:02</a> 然後它說註解太多。所以這裡沒有適合的 lint rule。是啊，我不知道該拿註解怎麼辦。我是指，像是 Lauren Tan（poteto）說他們直接禁止寫註解。不允許任何註解。我有點想朝那個方向走，但我在想我們是否要分階段進行，先在某些資料夾中禁止註解。這很有意思。在新功能 features/diagrams 裡有 18% 的行數是註解，而整個 repo 的平均值是 12%。我 repo 裡有 12% 的程式碼是註解，而新功能有 20% 是註解。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3692s" target="_blank" rel="noopener noreferrer">61:32</a> 太瘋狂了。好，我很喜歡第 1 點。我認為所有這些都應該在 repo 上開成 issue。我們能不能也開始在某些資料夾試行「不寫註解」的規則？而且實際上，我想請你給我意見：如果我們立刻刪除 features/diagrams 裡面的所有註解，我們會損失什麼？註解中是否有任何資訊是無法單純從程式碼本身推敲出來的？好。第 2 點，它說要修正那些在教被否決 pattern 的 docs。顯然，沒錯。第 3 點，原型程式碼是被直接複製過來，而不是重新實作。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3725s" target="_blank" rel="noopener noreferrer">62:05</a> 沒錯，這很有意思。所以它實際上建議修改我的 skill：prototype skill，以及 implement……implement-spec、implement brief。針對第 3 點，你能不能在 mattpocock/skills repo 上開一個 issue？順帶一提，我的 skill 常常就是這樣改進的：我根據在這些 retro 中發現的問題，為自己的 skill 開 issue，然後它們就會一點一點獲得改進。審查者無法用單一 agent 涵蓋大型 diff。沒錯。所以這是 code-review skill 有點無法發揮到極限。請你為第 4 點開一個 issue 好嗎？</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3756s" target="_blank" rel="noopener noreferrer">62:36</a> 而且我想可能已經有一個現有的 issue 了。所以也許你可以把這個加上去，當作讓我去查看它的一個額外理由。有一種論點是，與其只對 spec 做自動化審查，你應該對每一個 ticket 都做，但我發現那真的是慢得離譜。那絕對是極度緩慢的做法。但看起來 code-review skill 好像被限制在 400 字以內，這對我來說不太合理。所以我想也許 code-review skill 可能需要修改，可能需要把更多區塊拆分給子 agent，這樣它才能更容易完成。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3792s" target="_blank" rel="noopener noreferrer">63:12</a> 好，第 6 點它問了一些關於 implement-spec skill 的事情。我很喜歡那個想法。它基本上是說在 implement-spec 裡，它太早建立合併用的 agent 了。它應該直接嘗試把它合併進去就好。至於第 7 點，你可以開一個 issue 來追蹤這件事嗎？看看我們是否能逐步爬坡改良出一套更快的 suite？在第 8 點，我有個叫做 verify CVM 的 skill，基本上每當我想驗證 CVM 上的某些程式碼或實作時，它就會啟動。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3823s" target="_blank" rel="noopener noreferrer">63:43</a> 它會在瀏覽器裡面執行。會做各種各樣的事。好，你可以把第 8 點加為一個 issue 嗎？還有第 9 點的所有細項，都應該加為各自獨立的 issue。那些看起來都很棒。所以老實說，這次 retro 非常非常棒。我想我們可能可以從這裡整理出大約 20 個 issue。這些事情我們大概不需要做 grilling。這些事情我們可以直接交給 agent，然後拿回 PR，隨著時間慢慢改善這個 repo。在跑這個的同時，我們的 agent 一直在進行合併。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3853s" target="_blank" rel="noopener noreferrer">64:13</a> 看起來它只是在等待所有的 CI 檢查完成，然後依序將每一個合併進去。</p>
+<h2 id="sec-17">章節 17：註解稽核與禁用註解（64:16）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3858s" target="_blank" rel="noopener noreferrer">64:18</a> 好，就在這進行的同時，我們的註解稽核結果出來了。所以它指出，在大約 2,000 行的註解當中，大約有 940 行現在就可以刪掉了。另外大約有 1,000 行解釋了你在程式碼中看不到的原因。它說有 7 個註解已經過期了。你看吧。而且沒有任何 eslint-disable 或 @ts-expect-error 指令需要擔心。好，讓我先對 agent 不客氣地說幾句。註解讓我擔心的地方在於，它們會讓變通寫法到處蔓延，</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3889s" target="_blank" rel="noopener noreferrer">64:49</a> 而這些註解有點像是 agent 放在那裡的遮羞布，用來說：「你看，這沒問題，因為我們有附解釋性的註解。」像 Lauren Tan 這類許多人背後的想法是，註解其實是一個你太常用的安全閥，你基本上是在說：「好，因為我有寫這個註解，所以我可以採用這個變通寫法。」然而，如果你被禁止寫註解，你實際上可能就不會採用變通寫法了。說了這麼多，我希望你做的是告訴我，其中哪些可以移到 ADR，哪些實際上可以直接改掉、不再用變通寫法。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3927s" target="_blank" rel="noopener noreferrer">65:27</a> 換句話說，改用不需要註解的方式。以及哪些可以直接刪掉，因為它們其實不需要，或者你可以直接從程式碼推斷出來。我希望你在這裡更激進一點。我們來看看它在這裡怎麼說。我不知道。來看看。好，你猜怎麼著？它同意我的看法。變通寫法旁邊的註解通常標記著該處程式碼本該用不同方式設計，而不是去解釋它。哈哈。它推測 tldraw 和 Command+K 的怪癖大多會變成 adapter wrapper。競態條件的限制大多可以變成測試名稱。沒錯，那是個正當的地方，可以放某種自由文字，比如就是一個測試的名稱。</p>
+<h2 id="sec-18">章節 18：試用做好的功能（65:58）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3960s" target="_blank" rel="noopener noreferrer">66:00</a> 而在這期間，我們的 PR，也就是那個超大的 PR 堆疊，現在已經合併到正式環境了。所以我已經把這個載入好了。我們應該可以在這裡擷取我的臉。搞定。抓到我的臉了。而且我們可以看到我可以像這樣在縮圖上加上文字。所以，我可以在我手正好指著的地方加上一個大框框。我可以一路往下捲，看到它最終就是這個樣子。這裡有一個按鈕寫著在繪圖背後加上深色面板。所以如果我想的話，我可以把它拿掉或加進去。我是說，它還挺不錯的，各位。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=3992s" target="_blank" rel="noopener noreferrer">66:32</a> 這成果不賴。如果我退出回到這裡，我們就可以看到我的縮圖已經準備好了。當我要上傳到 YouTube 時，我就可以選用它。我可以點回去編輯它。然後我們應該就回到這個畫面了。太棒了。所以你可以清楚看到它對我們製作的原型還原度有多高。它看起來運作正常。好。我在這裡可能確實有一些後續回饋，但整體來說，沒錯，我可以插入圖示。舉例來說，我們就加上這一個。碰。就像這樣。把它放在我的手指上。太棒了。搞定。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=4022s" target="_blank" rel="noopener noreferrer">67:02</a> 就這樣，我做出了一個功能，一個在我以後使用這個應用程式的所有時間裡，都會很享受使用的功能。而在我們 agent 這裡的畫面中，我們可以看到沒錯，當我叫它更激進一點時，它說有 22 個可以直接刪除。有 18 個變通寫法需要修改。看看那個。我是說，那太不可思議了。我覺得這裡可能可以做成一個 skill，你知道的，就像是查看 repo 裡的所有註解，把那些當作 code smell，然後說：「好，聞聞看、聞聞看。看一下那個註解。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=4053s" target="_blank" rel="noopener noreferrer">67:33</a> 看看它描述的是什麼變通寫法。我們能不能直接去掉那個變通寫法？把註解拿掉。」而且它確實說有 3 個 ADR。沒錯，你看吧。像是 CVM 自訂形狀是一種 persistence contract。Facecam 置中是靠目測微調的（推定，字幕作 by I）；diagram PNG（推定，字幕作 PGs）是在執行中的應用程式裡算繪的。這三者我都同意很適合寫成 ADR。而且它在這裡給了我建議的 PR 順序。所以，我們再來下一次 prompt，把這件事做個收尾。我希望你把所有這些發現整理成另一個 issue，作為這個想法的統整性 issue。</p>
+<h2 id="sec-19">章節 19：接下來，以及人的價值在哪（68:02）</h2>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=4083s" target="_blank" rel="noopener noreferrer">68:03</a> 事情大概就是這樣了。接下來我會做的是進到我剛剛做出來的東西裡面。我會試著找出任何可以改進的地方，並且對它做 QA。然後那些會變成 issue，接著我可以直接用 agent 一口氣做完，大概連 grilling 都不用。然後我會回頭檢視那些 issue，讓我的 agent 看過全部，並將它們轉化為程式碼庫的改進，而且我預期所有這些的 diff 都會非常非常小，所以我可以直接一次搞定。以上就是全部內容了，各位。希望你們喜歡這種由我實際帶大家看我是怎麼做事的深度剖析。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=4115s" target="_blank" rel="noopener noreferrer">68:35</a> 也希望你們能清楚感受到在這個過程中，我在哪裡最具價值。我在一開始的對齊階段最有價值，在那裡我們會把一切都討論清楚。我們達成共識。我完全理解要打造的是什麼。我建立一個原型。我們一起把這一切理清楚。然後在最後我也非常有用，那時我的技術專業可以派上用場，我可以貫徹我的程式碼標準，我可以說：不，那看起來不好。我們改這樣做。換句話說，grilling 和 retro 確實是我與系統互動的兩個主要時間點。然後當然還有做 QA，融入我的品味，確保一切感覺對勁，而且運作方式符合我的期望。</p>
+<p><a href="https://www.youtube.com/watch?v=jVBlkOF8sHk&amp;t=4152s" target="_blank" rel="noopener noreferrer">69:12</a> 非常感謝你們的觀看。希望你們喜歡這支到目前為止將近 1 小時 10 分鐘的影片，並且從中學到了一些東西。我很喜歡做這種深度剖析。我沒有足夠的時間來做這些。所以如果你喜歡這個，請務必分享給你的朋友，這會激勵我製作更多類似內容。非常感謝觀看。我們很快再見。</p>
+</article></main>
+<footer>
+<p>本頁為非官方翻譯，由 AI 模型翻譯，依 YouTube 機器字幕整理，未經人工校稿、未逐句對照原音；影片版權屬原權利人。另見：<a href="index.html">深度導讀</a>、<a href="player.html">字幕同步播放器</a>。</p>
+</footer>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="圖片放大檢視"><button type="button" aria-label="關閉放大檢視">關閉（Esc）</button><img src="" alt=""></div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox'), big=box.querySelector('img'), btn=box.querySelector('button'), last=null;
+  function open(img){last=img;big.src=img.currentSrc||img.src;big.alt=img.alt;box.classList.add('is-open');btn.focus();}
+  function close(){box.classList.remove('is-open');big.removeAttribute('src');if(last){last.focus();}}
+  document.querySelectorAll('figure img').forEach(function(img){
+    img.addEventListener('click',function(){open(img);});
+    img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img);}});
+  });
+  box.addEventListener('click',function(e){if(e.target===box||e.target===btn){close();}});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape'){close();}
+    if(e.key==='Tab'){e.preventDefault();btn.focus();}
+  });
+})();
+</script>
+</body>
+</html>

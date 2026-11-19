@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 448" width="480" height="448" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>講者自述與系統互動的兩個主要時間點</title>
+<desc>一條橫帶分三段：前段是對齊（grilling 與原型），中段是 AFK、由 agent 自己實作（虛線），後段是 review 與 retro。前後兩段是講者自述與系統互動的兩個主要時間點。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker></defs>
+<rect width="480" height="448" fill="#fbfaf7"/>
+<text x="240" y="40" font-size="15" fill="#222222" text-anchor="middle">理解要做什麼、一起做出原型</text>
+<rect x="20" y="54" width="440" height="76" rx="10" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1.5"/>
+<text x="240" y="100" font-size="16" fill="#ffffff" font-weight="bold" text-anchor="middle">前段：對齊（grilling 與原型）</text>
+<rect x="20" y="144" width="440" height="76" rx="0" fill="#fbe9d6" stroke="#d9822b" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="240" y="190" font-size="16" fill="#222222" font-weight="bold" text-anchor="middle">AFK：agent 自己實作</text>
+<rect x="20" y="234" width="440" height="76" rx="10" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1.5"/>
+<text x="240" y="280" font-size="16" fill="#ffffff" font-weight="bold" text-anchor="middle">後段：review 與 retro</text>
+<text x="240" y="340" font-size="15" fill="#222222" text-anchor="middle">技術專業派上用場、貫徹程式碼標準</text>
+<text x="240" y="386" font-size="13" fill="#222222" text-anchor="middle">講者自述：grilling 與 retro 是他與系統互動的兩個主要時間點</text>
+<text x="240" y="428" font-size="13" fill="#555555" text-anchor="middle">依影片 1:08:35 起的總結繪製</text>
+</svg>

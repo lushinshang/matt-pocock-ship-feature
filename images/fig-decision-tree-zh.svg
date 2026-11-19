@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="960" height="470" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>開新工作時選 skill 的決策順序</title>
+<desc>由上而下：先看這份 diff 是否很小；小就直接一次做完，不必 grilling；否則先用 grill-with-docs，做下去若比想像大很多，再改走 wayfinder，拉長到多個 session。先從 grill-with-docs 起手是講者的偏好。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker></defs>
+<rect width="960" height="470" fill="#fbfaf7"/>
+<rect x="150" y="24" width="300" height="48" rx="8" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1.5"/>
+<text x="300" y="54" font-size="17" fill="#ffffff" font-weight="bold" text-anchor="middle">要做的東西：一份 diff</text>
+<path d="M300 74 L300 98" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<polygon points="300,98.0 410.0,146 300,194.0 190.0,146" fill="#e8e8e4" stroke="#1f3a5f" stroke-width="2.5"/>
+<text x="300" y="151.25" font-size="15" fill="#222222" font-weight="bold" text-anchor="middle">diff 很小？</text>
+<path d="M410 146 L520 146" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<text x="430" y="136" font-size="15" fill="#222222" font-weight="bold" text-anchor="start">是</text>
+<rect x="522" y="118" width="360" height="56" rx="10" fill="#f1f1ed" stroke="#9a9a92" stroke-width="1.5"/>
+<text x="702" y="152" font-size="15" fill="#222222" text-anchor="middle">大概直接一次做完，不必 grilling</text>
+<path d="M300 194 L300 246" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<text x="312" y="226" font-size="15" fill="#222222" font-weight="bold" text-anchor="start">否</text>
+<rect x="170" y="248" width="260" height="56" rx="10" fill="#3d7049" stroke="#3d7049" stroke-width="1.5"/>
+<text x="300" y="283" font-size="17" fill="#ffffff" font-weight="bold" text-anchor="middle" font-family="Menlo, Consolas, monospace">grill-with-docs</text>
+<path d="M430 276 L456 276" stroke="#444" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+<rect x="456" y="252" width="480" height="48" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="696" y="282" font-size="14" fill="#222222" text-anchor="middle">先從這裡起手：規模若比預期小，就省掉 wayfinder 的額外負擔</text>
+<path d="M300 304 L300 336" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<polygon points="300,338.0 420.0,386 300,434.0 180.0,386" fill="#e8e8e4" stroke="#1f3a5f" stroke-width="2.5"/>
+<text x="300" y="391.25" font-size="15" fill="#222222" font-weight="bold" text-anchor="middle">比想像大很多？</text>
+<path d="M420 386 L520 386" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<text x="440" y="376" font-size="15" fill="#222222" font-weight="bold" text-anchor="start">是</text>
+<rect x="522" y="354" width="400" height="64" rx="10" fill="#f1f1ed" stroke="#9a9a92" stroke-width="1.5"/>
+<text x="722" y="392" font-size="15" fill="#222222" text-anchor="middle">改走 wayfinder，拉長到多個 session</text>
+<text x="480" y="458" font-size="13" fill="#555555" text-anchor="middle">依影片 3:08 到 4:10 的口述整理</text>
+</svg>
