@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 304" width="480" height="304" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>5 個方塊兩兩相連的關係弧線</title>
+<desc>5 個方塊，相鄰兩兩有雙向箭頭，其餘配對以圓弧雙向箭頭相連，表示每個 token 都要和其餘所有 token 建立關係（講者的口頭解釋）。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker><marker id="ahw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#f2f2f2"/></marker><pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0 L0 5" stroke="#8a8a8a" stroke-width="1.6"/></pattern></defs>
+<rect width="480" height="304" fill="#fbfaf7"/>
+<rect x="8" y="8" width="464" height="288" rx="16" fill="#111111" stroke="#111111" stroke-width="1"/>
+<rect x="17.2" y="165.0" width="71.5" height="49.5" rx="6.6" fill="none" stroke="#f2f2f2" stroke-width="2.2"/>
+<rect x="110.8" y="165.0" width="71.5" height="49.5" rx="6.6" fill="none" stroke="#f2f2f2" stroke-width="2.2"/>
+<rect x="204.3" y="165.0" width="71.5" height="49.5" rx="6.6" fill="none" stroke="#f2f2f2" stroke-width="2.2"/>
+<rect x="297.8" y="165.0" width="71.5" height="49.5" rx="6.6" fill="none" stroke="#f2f2f2" stroke-width="2.2"/>
+<rect x="391.3" y="165.0" width="71.5" height="49.5" rx="6.6" fill="none" stroke="#f2f2f2" stroke-width="2.2"/>
+<path d="M77.8 162.2 Q99.8 146.3 121.8 162.2" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)" marker-start="url(#ahw)"/>
+<path d="M171.3 162.2 Q193.3 146.3 215.3 162.2" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)" marker-start="url(#ahw)"/>
+<path d="M264.8 162.2 Q286.8 146.3 308.8 162.2" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)" marker-start="url(#ahw)"/>
+<path d="M358.3 162.2 Q380.3 146.3 402.3 162.2" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)" marker-start="url(#ahw)"/>
+<path d="M59.6 163.4 A86.9 53.9 0 0 1 233.4 163.4" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)" marker-start="url(#ahw)"/>
+<path d="M48.6 163.4 A145.2 90.0 0 0 1 339.0 163.4" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)" marker-start="url(#ahw)"/>
+<path d="M37.6 163.4 A202.4 125.5 0 0 1 442.4 163.4" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)" marker-start="url(#ahw)"/>
+<path d="M152.0 163.4 A88.0 54.6 0 0 1 328.0 163.4" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)" marker-start="url(#ahw)"/>
+<path d="M141.0 163.4 A145.2 90.0 0 0 1 431.4 163.4" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)" marker-start="url(#ahw)"/>
+<path d="M246.6 163.4 A86.9 53.9 0 0 1 420.4 163.4" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)" marker-start="url(#ahw)"/>
+<text x="240" y="250" font-size="12" fill="#b4b4b4" text-anchor="middle"><tspan x="240" y="250">方塊代表 token，弧線代表要追蹤的關係；依 Matt Pocock 影片畫面</tspan><tspan x="240" y="267">（40:51）重繪，原圖沒有文字</tspan></text>
+</svg>

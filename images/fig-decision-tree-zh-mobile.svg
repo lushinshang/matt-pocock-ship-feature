@@ -1,30 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 694" width="480" height="694" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
-<title>開新工作時選 skill 的決策順序</title>
-<desc>由上而下：先看這份 diff 是否很小；小就直接一次做完，不必 grilling；否則先用 grill-with-docs，做下去若比想像大很多，再改走 wayfinder，拉長到多個 session。先從 grill-with-docs 起手是講者的偏好。</desc>
-<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker></defs>
-<rect width="480" height="694" fill="#fbfaf7"/>
-<rect x="100" y="20" width="280" height="46" rx="8" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1.5"/>
-<text x="240" y="49" font-size="16" fill="#ffffff" font-weight="bold" text-anchor="middle">要做的東西：一份 diff</text>
-<path d="M240 68 L240 92" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
-<polygon points="240,92.0 350.0,140 240,188.0 130.0,140" fill="#e8e8e4" stroke="#1f3a5f" stroke-width="2.5"/>
-<text x="240" y="145.25" font-size="15" fill="#222222" font-weight="bold" text-anchor="middle">diff 很小？</text>
-<path d="M240 188 L240 222" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
-<text x="250" y="208" font-size="15" fill="#222222" font-weight="bold" text-anchor="start">是</text>
-<rect x="20" y="224" width="400" height="52" rx="10" fill="#f1f1ed" stroke="#9a9a92" stroke-width="1.5"/>
-<text x="220" y="256" font-size="15" fill="#222222" text-anchor="middle">大概直接一次做完，不必 grilling</text>
-<path d="M350 140 L452 140 L452 314 L240 314 L240 328" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
-<text x="362" y="130" font-size="15" fill="#222222" font-weight="bold" text-anchor="start">否</text>
-<rect x="110" y="330" width="260" height="52" rx="10" fill="#3d7049" stroke="#3d7049" stroke-width="1.5"/>
-<text x="240" y="363" font-size="17" fill="#ffffff" font-weight="bold" text-anchor="middle" font-family="Menlo, Consolas, monospace">grill-with-docs</text>
-<rect x="20" y="396" width="440" height="44" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="1.5" stroke-dasharray="7 5"/>
-<text x="240" y="424" font-size="13" fill="#222222" text-anchor="middle">先從這裡起手：規模若比預期小，就省掉 wayfinder 的額外負擔</text>
-<path d="M240 384 L240 394" stroke="#444" stroke-width="2" fill="none"/>
-<path d="M240 442 L240 470" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
-<polygon points="240,472.0 360.0,520 240,568.0 120.0,520" fill="#e8e8e4" stroke="#1f3a5f" stroke-width="2.5"/>
-<text x="240" y="525.25" font-size="15" fill="#222222" font-weight="bold" text-anchor="middle">比想像大很多？</text>
-<path d="M240 568 L240 600" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
-<text x="250" y="588" font-size="15" fill="#222222" font-weight="bold" text-anchor="start">是</text>
-<rect x="20" y="602" width="400" height="52" rx="10" fill="#f1f1ed" stroke="#9a9a92" stroke-width="1.5"/>
-<text x="220" y="634" font-size="14" fill="#222222" text-anchor="middle">改走 wayfinder，拉長到多個 session</text>
-<text x="240" y="682" font-size="13" fill="#555555" text-anchor="middle">依影片 3:08 到 4:10 的口述整理</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 800" width="480" height="800" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>開新工作時選哪個做法的決策樹</title>
+<desc>黑底決策樹，由上而下：新的 session 先問 diff 夠不夠小；是就一次做完（One Shot），否就用 /grill-with-docs；再問是否比你想的還大，是就改走 /wayfinder，否就繼續 grilling。依影片畫面翻譯重繪，原圖為英文。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker><marker id="ahw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#f2f2f2"/></marker><pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0 L0 5" stroke="#8a8a8a" stroke-width="1.6"/></pattern></defs>
+<rect width="480" height="800" fill="#fbfaf7"/>
+<rect x="8" y="8" width="464" height="784" rx="16" fill="#111111" stroke="#111111" stroke-width="1"/>
+<circle cx="44" cy="44" r="14" fill="url(#hatch)" stroke="#4aa3f0" stroke-width="3"/>
+<text x="76" y="51" font-size="20" fill="#f2f2f2" font-weight="bold" text-anchor="start">一個新的 session</text>
+<text x="76" y="75" font-size="12" fill="#b4b4b4" text-anchor="start">你想開始一件新工作，卻不知道該選哪個做法。</text>
+<path d="M44 62 L44 116" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)"/>
+<polygon points="44,122 62,140 44,158 26,140" fill="url(#hatch)" stroke="#f08a3c" stroke-width="3" stroke-linejoin="round"/>
+<text x="76" y="147" font-size="20" fill="#f2f2f2" font-weight="bold" text-anchor="start">diff 夠小嗎？</text>
+<text x="76" y="171" font-size="12" fill="#b4b4b4" text-anchor="start">你能很快審完 agent 的 diff 嗎？重做一次幾乎不花時間嗎？</text>
+<path d="M44 162 L44 240" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<path d="M44 240 L44 336" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)"/>
+<text x="58" y="302" font-size="17" fill="#f2f2f2" font-weight="bold" text-anchor="start">否</text>
+<path d="M44 240 L128 240" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)"/>
+<text x="86" y="230" font-size="17" fill="#f2f2f2" font-weight="bold" text-anchor="middle">是</text>
+<rect x="138.0" y="223.0" width="34" height="34" rx="8" fill="url(#hatch)" stroke="#f6c33b" stroke-width="3"/>
+<text x="186" y="247" font-size="20" fill="#f2f2f2" font-weight="bold" text-anchor="start">一次做完（One Shot）</text>
+<text x="186" y="271" font-size="12" fill="#b4b4b4" text-anchor="start">動手前不必先對齊，看到 diff 之後再對齊。</text>
+<rect x="27.0" y="343.0" width="34" height="34" rx="8" fill="url(#hatch)" stroke="#f6c33b" stroke-width="3"/>
+<text x="76" y="367" font-size="20" fill="#f2f2f2" font-weight="bold" text-anchor="start" font-family="Menlo, Consolas, monospace">/grill-with-docs</text>
+<text x="76" y="391" font-size="12" fill="#b4b4b4" text-anchor="start">先對齊再動手，並把領域語言定下來。</text>
+<path d="M44 382 L44 446" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)"/>
+<polygon points="44,452 62,470 44,488 26,470" fill="url(#hatch)" stroke="#f08a3c" stroke-width="3" stroke-linejoin="round"/>
+<text x="76" y="477" font-size="20" fill="#f2f2f2" font-weight="bold" text-anchor="start">比你想的還大嗎？</text>
+<text x="76" y="501" font-size="12" fill="#b4b4b4" text-anchor="start">grilling 是不是正在進入 dumb zone？迷霧比預期的多嗎？</text>
+<path d="M44 492 L44 580" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<path d="M44 580 L44 676" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)"/>
+<text x="58" y="642" font-size="17" fill="#f2f2f2" font-weight="bold" text-anchor="start">否</text>
+<path d="M44 580 L128 580" stroke="#f2f2f2" stroke-width="2.2" fill="none" stroke-linecap="round" marker-end="url(#ahw)"/>
+<text x="86" y="570" font-size="17" fill="#f2f2f2" font-weight="bold" text-anchor="middle">是</text>
+<rect x="138.0" y="563.0" width="34" height="34" rx="8" fill="url(#hatch)" stroke="#f6c33b" stroke-width="3"/>
+<text x="186" y="587" font-size="20" fill="#f2f2f2" font-weight="bold" text-anchor="start" font-family="Menlo, Consolas, monospace">/wayfinder</text>
+<text x="186" y="611" font-size="12" fill="#b4b4b4" text-anchor="start"><tspan x="186" y="611">把最初的 grilling session 變成一張 </tspan><tspan x="186" y="628">Wayfinder 地圖，從那裡繼續。</tspan></text>
+<rect x="27.0" y="683.0" width="34" height="34" rx="8" fill="url(#hatch)" stroke="#f6c33b" stroke-width="3"/>
+<text x="76" y="707" font-size="20" fill="#f2f2f2" font-weight="bold" text-anchor="start">繼續</text>
+<text x="76" y="731" font-size="12" fill="#b4b4b4" text-anchor="start">繼續 grilling、grilling、grilling！</text>
+<text x="24" y="764" font-size="12" fill="#b4b4b4" text-anchor="start">依 Matt Pocock 影片畫面（03:09）翻譯重繪，原圖為英文</text>
 </svg>

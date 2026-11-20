@@ -47,7 +47,7 @@
 <text x="397.2428" y="560.55" font-size="13" fill="#222222" font-weight="bold" text-anchor="middle">agent 主導</text>
 <path d="M240 590 L240 606" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
 <rect x="20" y="608" width="440" height="64" rx="8" fill="#ffffff" stroke="#d9822b" stroke-width="3"/>
-<text x="36" y="636" font-size="17" fill="#222222" font-weight="bold" text-anchor="start">拆成 7 個 PR</text>
+<text x="36" y="636" font-size="17" fill="#222222" font-weight="bold" text-anchor="start">拆成 9 個 PR</text>
 <text x="36" y="658" font-size="13" fill="#555555" text-anchor="start">48:43</text>
 <rect x="350.4856" y="628" width="93.5144" height="24" rx="12.0" fill="#d9822b" stroke="#d9822b" stroke-width="1"/>
 <text x="397.2428" y="644.55" font-size="13" fill="#222222" font-weight="bold" text-anchor="middle">agent 主導</text>

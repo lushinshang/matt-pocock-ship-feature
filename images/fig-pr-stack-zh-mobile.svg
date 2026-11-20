@@ -1,28 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 622" width="480" height="622" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
-<title>一個大 PR 拆成 7 個依序合併的 PR</title>
-<desc>左邊一個大 PR，右邊 7 個小 PR 堆疊：第一個含術語表詞條、diagram component、ADR-060，第二個抽出共用的 diagram 編輯器，中間幾個只標講者提到的內容，最後一個合併時打開 feature flag。圖例說明雙向門與單向門。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 972" width="480" height="972" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>一個大 PR 拆成 9 個小 PR，每個標示門類型</title>
+<desc>左邊是一個大 PR（草稿 #2734，+21,349 −371，37 個 commit、71 個檔案），箭頭指向右邊由上往下排列的 9 個小 PR；9 列都標有 Claude 判斷的門類型：8 列雙向門（綠，其中第 9 列為依說明推定）、1 列單向門（橘，只含 migration 與 schema）。</desc>
 <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker></defs>
-<rect width="480" height="622" fill="#fbfaf7"/>
-<rect x="120" y="20" width="240" height="56" rx="10" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1.5"/>
-<text x="240" y="55" font-size="18" fill="#ffffff" font-weight="bold" text-anchor="middle">一個大 PR</text>
-<path d="M240 78 L240 112" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
-<text x="256" y="100" font-size="15" fill="#222222" font-weight="bold" text-anchor="start">拆成 7 個依序合併的 PR</text>
-<rect x="20" y="118" width="440" height="46" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-<text x="240" y="147" font-size="14" fill="#222222" text-anchor="middle">術語表詞條、diagram component、ADR-060</text>
-<rect x="20" y="172" width="440" height="46" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-<text x="240" y="201" font-size="14" fill="#222222" text-anchor="middle">抽出共用的 diagram 編輯器</text>
-<rect x="20" y="226" width="440" height="206" rx="8" fill="#f6f6f2" stroke="#b5b4aa" stroke-width="1.5" stroke-dasharray="7 5"/>
-<rect x="60" y="234" width="360" height="30" rx="8" fill="#e8e8e4" stroke="#b5b4aa" stroke-width="1"/>
-<rect x="60" y="270" width="360" height="30" rx="8" fill="#e8e8e4" stroke="#b5b4aa" stroke-width="1"/>
-<rect x="60" y="306" width="360" height="30" rx="8" fill="#e8e8e4" stroke="#b5b4aa" stroke-width="1"/>
-<rect x="60" y="342" width="360" height="30" rx="8" fill="#e8e8e4" stroke="#b5b4aa" stroke-width="1"/>
-<text x="240" y="392" font-size="13" fill="#222222" text-anchor="middle">中間各 PR：講者念到約 500 行、約 2,500 行</text>
-<text x="240" y="416" font-size="13" fill="#222222" text-anchor="middle">其中一個是只新增欄位的 migration，講者唯一認為必審</text>
-<rect x="20" y="446" width="440" height="46" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
-<text x="240" y="475" font-size="14" fill="#222222" text-anchor="middle">最後一個：合併時打開 feature flag</text>
-<path d="M26 526 L74 526" stroke="#444" stroke-width="2.5" fill="none" marker-end="url(#ah)" marker-start="url(#ah)"/>
-<text x="90" y="531" font-size="14" fill="#222222" text-anchor="start">雙向門：合併後隨時可以 revert</text>
-<path d="M26 560 L74 560" stroke="#444" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
-<text x="90" y="565" font-size="14" fill="#222222" text-anchor="start">單向門：合併後很難還原</text>
-<text x="240" y="604" font-size="13" fill="#555555" text-anchor="middle">依影片 48:43 到 57:50 的口述整理</text>
+<rect width="480" height="972" fill="#fbfaf7"/>
+<rect x="20" y="20" width="440" height="84" rx="10" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1.5"/>
+<text x="240" y="54" font-size="17" fill="#ffffff" font-weight="bold" text-anchor="middle">一個大 PR（草稿 #2734）</text>
+<text x="240" y="80" font-size="13" fill="#ffffff" text-anchor="middle">+21,349 −371，37 個 commit、71 個檔案</text>
+<path d="M240 106 L240 128" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="20" y="134" width="440" height="74" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="36" y="160" font-size="14" fill="#222222" text-anchor="start">術語表詞條、diagram component 與 ADR 0060（只有文件）</text>
+<rect x="36" y="170" width="59.34" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="65.67" y="186.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">雙向門</text>
+<rect x="20" y="218" width="440" height="74" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="36" y="244" font-size="14" fill="#222222" text-anchor="start">抽出共用的 diagram 編輯器</text>
+<rect x="36" y="254" width="59.34" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="65.67" y="270.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">雙向門</text>
+<rect x="20" y="302" width="440" height="74" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="36" y="328" font-size="14" fill="#222222" text-anchor="start">「Go to」開啟 DiagramSnapshot 時不還原</text>
+<rect x="36" y="338" width="59.34" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="65.67" y="354.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">雙向門</text>
+<rect x="20" y="386" width="440" height="74" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="36" y="412" font-size="14" fill="#222222" text-anchor="start">在指令面板加入「Insert diagram」</text>
+<rect x="36" y="422" width="59.34" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="65.67" y="438.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">雙向門</text>
+<rect x="20" y="470" width="440" height="74" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="36" y="496" font-size="14" fill="#222222" text-anchor="start">縮圖編輯器的零件（不需要 schema 的程式碼）</text>
+<rect x="36" y="506" width="59.34" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="65.67" y="522.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">雙向門</text>
+<rect x="20" y="554" width="440" height="94" rx="8" fill="#ffffff" stroke="#d9822b" stroke-width="2.5"/>
+<text x="36" y="580" font-size="14" fill="#222222" text-anchor="start"><tspan x="36" y="580">只含 migration 與 schema：只新增欄位，約 35 行（不含測</tspan><tspan x="36" y="600">試）</tspan></text>
+<rect x="36" y="610" width="59.34" height="24" rx="12.0" fill="#d9822b" stroke="#d9822b" stroke-width="1"/>
+<text x="65.67" y="626.55" font-size="13" fill="#222222" font-weight="bold" text-anchor="middle">單向門</text>
+<rect x="20" y="658" width="440" height="74" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="36" y="684" font-size="14" fill="#222222" text-anchor="start">持久化：儲存與複製、記錄來源、搜尋、封存、Draft 防護</text>
+<rect x="36" y="694" width="59.34" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="65.67" y="710.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">雙向門</text>
+<rect x="20" y="742" width="440" height="74" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="36" y="768" font-size="14" fill="#222222" text-anchor="start">縮圖頁面編輯器（feature flag 關閉）</text>
+<rect x="36" y="778" width="59.34" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="65.67" y="794.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">雙向門</text>
+<rect x="20" y="826" width="440" height="74" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="36" y="852" font-size="14" fill="#222222" text-anchor="start">兩個編輯器都能搜尋（打開 feature flag）</text>
+<rect x="36" y="862" width="114.46000000000001" height="24" rx="12.0" fill="#3d7049" stroke="#3d7049" stroke-width="1"/>
+<text x="93.23" y="878.55" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">雙向門（推定）</text>
+<text x="20" y="930" font-size="12" fill="#555555" text-anchor="start"><tspan x="20" y="930">依 Matt Pocock 影片畫面（49:55、51:15）翻譯重繪；Claude 的方案，講者</tspan><tspan x="20" y="948">選用 1–9；第 9 個的門類型被鏡頭擋住，依 Claude 的說明推定</tspan></text>
 </svg>
