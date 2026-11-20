@@ -210,7 +210,7 @@ retro 收尾時，Claude 回覆說註解稽核的結果：大約 2,000 行註解
 - 工具仍有毛病。auto-compact 仍有點不可靠，agent 會擅自寫詞條、建 ADR（[20:52](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=1252s)），也會漏看既有程式碼（見上文）。
 - 成本與耗時只有零星線索。影片剪過，沒有交代總花費或總 token 用量；實作時間只有他事前「大約一小時或 45 分鐘」的預估（[47:28](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2848s)）；畫面上偶爾看得到 context 用量（如 83.6k，標示 8.0%，[1:01:55](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3715s)；由此推得視窗約 100 萬 token，這是本文推論），retro 報告寫事後把整合分支重切成堆疊，用了約 160 次 tool call，由 7 個 builder 子 agent 分工（[1:03:10](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=3790s)）。
 - 數字是自述。行數開場他估約 25,000（[01:11](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=71s)），畫面顯示新增 21,349 行、刪除 371 行（[48:21](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=2901s)）；PR 數量他口述七個，畫面標示九個；session 數開場他說「我想我們在這支影片裡大概進行了 30 個 session」（[01:07](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=67s)），user story 數、註解比例與稽核數字也都是他口述或念出 Claude 的回覆，本文沒有逐一核實。
-- 經驗談沒有數據。講原因 agent 就更放得開手、產出更可預測、agent 擅長拆 PR、決策空間越少表現越好、這一代 agent 似乎很擅長自己重現問題找原因，這些是他的經驗談，影片沒有附數據。
+- 經驗談沒有數據。講原因能讓 agent 更放得開手、決策空間越少表現越好、agent 擅長拆 PR、這一代 agent 擅長自己重現問題找原因，都是他的經驗談，影片沒有附數據。
 - 沒有對照組。他說這套做法比 plan mode 之類的方式更能事先對齊（[09:41](https://www.youtube.com/watch?v=jVBlkOF8sHk&t=581s)），影片沒有用同一個功能比較兩種做法的結果。
 
 ## 重點結論與實際啟示
@@ -233,7 +233,7 @@ retro 收尾時，Claude 回覆說註解稽核的結果：大約 2,000 行註解
 
 **撰稿、查證與圖片。** 主控為 Claude Sonnet 5.5，撰稿由 Opus 負責；對官方 repo 與外部說法的查證由 Sonnet subagent 進行，並經主控核對一手來源，重要說法須有一手來源，只有單方者降級標示，只用 Claude 系 subagent 與 gh 等工具，沒有另請其他模型交叉查證。資訊型示意圖由 Sonnet subagent 以程式繪成 SVG 並經檢查，封面與比喻插畫由 Codex 的 imagegen 製作。作者在影片裡秀出的決策樹、smart zone 方塊圖與 Spec／Tickets 投影片，以及畫面上 Claude 的 PR 對照表，另譯成台灣用語繁體中文重繪（前三者為 SVG，Spec／Tickets 為 imagegen），圖下標示影片出處與秒數，版權屬原作者。
 
-**審稿與修稿。** 初稿經兩位獨立的 Opus 審稿人（事實、編輯）、合併修稿、終審與總編輯潤稿；因篇幅過長，另由 Opus 精簡兩次（其中一次依獨立評分的意見），發布後再通讀潤稿一次。第二版的修訂由一位 Opus 依計畫執行，並由兩位獨立的 Opus 審稿人分別核對事實（其中一位自行重新取影格核對）與編輯一致性，意見由 AI 主控落實。
+**審稿與修稿。** 初稿與第二版各經兩位獨立的 Opus 審稿人分別核對事實與編輯一致性（第二版的事實審稿人自行重新取影格核對），再由 AI 主控落實意見；正文另經兩次精簡與總編輯潤稿。
 
 ## 來源清單
 
